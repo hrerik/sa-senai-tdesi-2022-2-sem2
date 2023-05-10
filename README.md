@@ -6,3 +6,6 @@ Criando um arquivo README.md e clonando repositório pela primeira vez.
 
 ### Segundo teste
 Fazendo o primeiro commit ao repositório remoto.
+
+### Terceiro Teste
+Para fazer um merge
