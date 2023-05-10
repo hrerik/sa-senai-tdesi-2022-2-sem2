@@ -3,3 +3,6 @@ Sitiação de Aprendizagem do Curso Técnico de Desenvolvimento de SIstemas do S
 
 ## *Teste*
 Criando um arquivo README.md e clonando repositório pela primeira vez.
+
+### Segundo teste
+Fazendo o primeiro commit ao repositório remoto.
