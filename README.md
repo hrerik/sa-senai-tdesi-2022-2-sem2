@@ -1,5 +1,5 @@
 # sa-senai-tdesi-2022-2-sem2
-Sitiação de Aprendizagem do Curso Técnico de Desenvolvimento de SIstemas do SENAI. 
+Situação de Aprendizagem do Curso Técnico de Desenvolvimento de Sistemas do SENAI. 
 
 ## *Teste*
 Criando um arquivo README.md e clonando repositório pela primeira vez.
@@ -8,4 +8,4 @@ Criando um arquivo README.md e clonando repositório pela primeira vez.
 Fazendo o primeiro commit ao repositório remoto.
 
 ### Terceiro Teste
-Para fazer um merge
+Para fazer um merge.
