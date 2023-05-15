@@ -65,6 +65,16 @@ Recursos noutros perfis:
 ### Carrinho de Compras
 
 Recursos:
--
+- Lista de produtos com:
+  - Preço
+  - Breve descrição
 
 ### Informações do produto
+
+Recursos:
+- Nome
+- Foto
+- Descrição
+- Fornecedor
+- Preço
+- Adicionar em lista de desejo (?)
