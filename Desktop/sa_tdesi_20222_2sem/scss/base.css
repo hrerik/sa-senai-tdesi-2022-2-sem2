@@ -1,0 +1,61 @@
+.logomarca {
+  height: 36px;
+}
+
+.aba-pesquisa {
+  width: 320px;
+  height: 28px;
+  border: #13678a solid 2px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.aba-pesquisa__input {
+  font: 300 12px "Inter", sans-serif;
+  width: 272px;
+  height: 100%;
+  background: none;
+  border: none;
+}
+.aba-pesquisa__lupa {
+  width: 16px;
+  height: 16px;
+}
+
+.botao-primario {
+  font: 700 16px "Inter", sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(90deg, #9aeba3, #13678a);
+  padding: 12px 16px;
+  border: none;
+  border-radius: 400px;
+}
+.botao-primario:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), linear-gradient(90deg, #9aeba3, #13678a);
+  cursor: pointer;
+}
+
+.botao-secundario {
+  font: 700 16px "Inter", sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  color: #404040;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: #e6e6e6;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 400px;
+}
+.botao-secundario:hover {
+  background: #bfbfbf;
+  cursor: pointer;
+}
+
+.area-login__entrar {
+  padding: 4px 8px;
+}
+.area-login__cadastrar {
+  padding: 4px 8px;
+}/*# sourceMappingURL=base.css.map */

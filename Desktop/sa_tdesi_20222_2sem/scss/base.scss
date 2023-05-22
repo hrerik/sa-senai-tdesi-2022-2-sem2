@@ -1,0 +1,153 @@
+//* CORES
+// Tons Primários
+$maastricht-blue: #012030;
+$blue-saphire: #13678a;
+$verdigris: #45c4b0;
+$granny-smith-apple: #9aeba3;
+$tea-green: #dafdba;
+
+// Tons de Cinza
+$branco: #ffffff;
+$cinza90: #e6e6e6;
+$cinza75: #bfbfbf;
+$cinza50: #808080;
+$cinza25: #404040;
+$cinza10: #1a1a1a;
+$preto: #000000;
+
+// Degradês
+$degrade-verde-azul: linear-gradient(90deg, $granny-smith-apple, $blue-saphire);
+
+$degrade-botao-primario-hover: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), $degrade-verde-azul;
+
+//* TIPOGRAFIA
+// Fontes
+$garamond: "EB Garamond", serif;
+$inter: "Inter", sans-serif;
+
+@mixin heading-1-negrito {
+    font: 600 11.25 * $espaco $garamond;
+}
+@mixin heading-2-negrito {
+    font: 600 8 * $espaco $garamond;
+}
+@mixin heading-3-negrito {
+    font: 600 5.625 * $espaco $garamond;
+}
+@mixin heading-4-negrito {
+    font: 600 4 * $espaco $garamond;
+}
+
+@mixin heading-1-regular {
+    font: 400 11.25 * $espaco $garamond;
+}
+@mixin heading-2-regular {
+    font: 400 8 * $espaco $garamond;
+}
+@mixin heading-3-regular {
+    font: 400 5.625 * $espaco $garamond;
+}
+@mixin heading-4-regular {
+    font: 400 4 * $espaco $garamond;
+}
+
+@mixin paragrafo {
+    font: 300 3 * $espaco $inter;
+}
+@mixin destaque-1 {
+    font: 700 5.625 * $espaco $inter;
+}
+@mixin destaque-2 {
+    font: 700 4 * $espaco $inter;
+}
+
+
+//* EFEITOS
+@mixin sombra-texto {
+    text-shadow: $escala*2px $escala*2px $escala*2px rgba(0, 0, 0, 0.25);
+}
+@mixin sombra-caixa {
+    box-shadow: $escala*4px $escala*4px $escala*8px rgba(0, 0, 0, 0.5);
+}
+
+
+//* ESPAÇAMENTO
+$escala: 0.5; // ! DEFINIRÁ ESCALA PARA TODO O SITE -- MUDÁ-LA PODERÁ QUEBRÁ-LO
+$espaco: $escala*8px; // ! MESMO APLICA-SE AQUI
+
+.logomarca {
+    height: 9 * $espaco;
+}
+
+.aba-pesquisa {
+    width: 80 * $espaco;
+    height: 7 * $espaco;
+
+    border: $blue-saphire solid 2px;
+    border-radius: 3.5 * $espaco;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__input {
+        @include paragrafo();
+        width: 68 * $espaco;
+        height: 100%;
+
+        background: none;
+        border: none;
+    }
+
+    &__lupa {
+        width: 4 * $espaco;
+        height: 4 * $espaco;
+    }
+}
+
+
+.botao-primario {
+    @include destaque-2();
+    @include sombra-texto();
+    color: $branco;
+    
+    @include sombra-caixa();
+    background: $degrade-verde-azul;
+    padding: 3 * $espaco 4 * $espaco;
+
+    border: none;
+    border-radius: 100 * $espaco;
+
+    &:hover {
+        background: $degrade-botao-primario-hover;
+        cursor: pointer;
+    }
+}
+
+.botao-secundario {
+    @include destaque-2();
+    @include sombra-texto();
+    color: $cinza25;
+    
+    @include sombra-caixa();
+    background: $cinza90;
+    padding: 3 * $espaco 4 * $espaco;
+    
+    border: none;
+    border-radius: 100 * $espaco;
+    
+    &:hover {
+        background: $cinza75;
+        cursor: pointer;
+    }
+}
+
+.area-login {
+    &__entrar {
+        padding: $espaco 2*$espaco;
+    }
+
+    &__cadastrar {
+        padding: $espaco 2*$espaco;
+    }
+}
