@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .logomarca {
   height: 36px;
 }
@@ -58,4 +63,11 @@
 }
 .area-login__cadastrar {
   padding: 4px 8px;
+}
+
+.header-principal {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #bfbfbf;
 }/*# sourceMappingURL=base.css.map */

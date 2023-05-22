@@ -75,6 +75,14 @@ $inter: "Inter", sans-serif;
 $escala: 0.5; // ! DEFINIRÁ ESCALA PARA TODO O SITE -- MUDÁ-LA PODERÁ QUEBRÁ-LO
 $espaco: $escala*8px; // ! MESMO APLICA-SE AQUI
 
+
+///////////////////////////////////////
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .logomarca {
     height: 9 * $espaco;
 }
@@ -150,4 +158,12 @@ $espaco: $escala*8px; // ! MESMO APLICA-SE AQUI
     &__cadastrar {
         padding: $espaco 2*$espaco;
     }
+}
+
+.header-principal {
+    width: 100vw;
+
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $cinza75;
 }
