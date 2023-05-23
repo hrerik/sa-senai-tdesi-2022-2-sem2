@@ -86,4 +86,32 @@ body {
 .botao-sidebar {
   width: 32px;
   height: 32px;
+}
+
+.subheader {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #bfbfbf;
+}
+.subheader__nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.subheader__nav__barra {
+  display: inline-block;
+  width: 1px;
+  height: 28px;
+  background: #13678a;
+}
+.subheader__nav__link {
+  color: #13678a;
+  text-decoration: none;
+}
+.subheader__nav__link:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }/*# sourceMappingURL=base.css.map */
