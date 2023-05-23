@@ -18,7 +18,7 @@ $preto: #000000;
 // Degradês
 $degrade-verde-azul: linear-gradient(90deg, $granny-smith-apple, $blue-saphire);
 
-$degrade-botao-primario-hover: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), $degrade-verde-azul;
+$degrade-botao-primario-hover: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), $degrade-verde-azul;
 
 //* TIPOGRAFIA
 // Fontes
@@ -61,22 +61,21 @@ $inter: "Inter", sans-serif;
     font: 700 4 * $espaco $inter;
 }
 
-
 //* EFEITOS
 @mixin sombra-texto {
-    text-shadow: $escala*2px $escala*2px $escala*2px rgba(0, 0, 0, 0.25);
+    text-shadow: $escala * 2px $escala * 2px $escala * 2px rgba(0, 0, 0, 0.25);
 }
 @mixin sombra-caixa {
-    box-shadow: $escala*4px $escala*4px $escala*8px rgba(0, 0, 0, 0.5);
+    box-shadow: $escala * 4px $escala * 4px $escala * 8px rgba(0, 0, 0, 0.5);
 }
-
 
 //* ESPAÇAMENTO
 $escala: 0.5; // ! DEFINIRÁ ESCALA PARA TODO O SITE -- MUDÁ-LA PODERÁ QUEBRÁ-LO
-$espaco: $escala*8px; // ! MESMO APLICA-SE AQUI
-
+$espaco: $escala * 8px; // ! MESMO APLICA-SE AQUI
 
 ///////////////////////////////////////
+
+* {box-sizing: border-box;}
 
 body {
     margin: 0;
@@ -108,17 +107,16 @@ body {
     }
 
     &__lupa {
-        width: 4 * $espaco;
-        height: 4 * $espaco;
+        width: 5 * $espaco;
+        height: 5 * $espaco;
     }
 }
-
 
 .botao-primario {
     @include destaque-2();
     @include sombra-texto();
     color: $branco;
-    
+
     @include sombra-caixa();
     background: $degrade-verde-azul;
     padding: 3 * $espaco 4 * $espaco;
@@ -136,14 +134,14 @@ body {
     @include destaque-2();
     @include sombra-texto();
     color: $cinza25;
-    
+
     @include sombra-caixa();
     background: $cinza90;
     padding: 3 * $espaco 4 * $espaco;
-    
+
     border: none;
     border-radius: 100 * $espaco;
-    
+
     &:hover {
         background: $cinza75;
         cursor: pointer;
@@ -151,19 +149,32 @@ body {
 }
 
 .area-login {
+    display: inline-flex;
+    gap: 8*$espaco;
+
     &__entrar {
-        padding: $espaco 2*$espaco;
+        padding: $espaco 2 * $espaco;
     }
 
     &__cadastrar {
-        padding: $espaco 2*$espaco;
+        padding: $espaco 2 * $espaco;
     }
 }
 
 .header-principal {
     width: 100vw;
+    height: 12*$espaco;
+
+    padding: 2*$espaco 8*$espaco;
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
     border-bottom: 1px solid $cinza75;
+}
+
+.botao-sidebar {
+    width: 8 * $espaco;
+    height: 8 * $espaco;
 }
