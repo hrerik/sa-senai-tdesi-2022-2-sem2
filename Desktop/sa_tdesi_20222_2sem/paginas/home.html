@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="\scss\base.css">
+    <link rel="stylesheet" href="..\scss\base.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,17 +19,18 @@
 
 <body>
     <header class="header-principal">
-        <div></div>
-        <img class="logomarca" src="/logos/luxida-logo.png" alt="Luxida">
+        <svg class="botao-sidebar" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19,8H5A1,1,0,0,1,5,6H19a1,1,0,0,1,0,2Z" fill="#13678a"/><path d="M19,13H5a1,1,0,0,1,0-2H19a1,1,0,0,1,0,2Z" fill="#13678a"/><path d="M19,18H5a1,1,0,0,1,0-2H19a1,1,0,0,1,0,2Z" fill="#13678a"/></svg>
+        <img class="logomarca" src="../logos/luxida-logo.png" alt="Luxida">
         <div class="aba-pesquisa">
-            <input class="aba-pesquisa__input" placeholder="Pesquise por livros, autores ou palavras-chaves" type="text" name="" id="">
-            <svg class="aba-pesquisa__lupa" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M31 28h-1.59l-.55-.55c1.96-2.27 3.14-5.22 3.14-8.45 0-7.18-5.82-13-13-13s-13 5.82-13 13 5.82 13 13 13c3.23 0 6.18-1.18 8.45-3.13l.55.55v1.58l10 9.98 2.98-2.98-9.98-10zm-12 0c-4.97 0-9-4.03-9-9s4.03-9 9-9 9 4.03 9 9-4.03 9-9 9z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>
+            <input class="aba-pesquisa__input" placeholder="Pesquise por livros, autores ou palavras-chaves" type="text">
+            <svg class="aba-pesquisa__lupa" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path fill="#13678a" d="M31 28h-1.59l-.55-.55c1.96-2.27 3.14-5.22 3.14-8.45 0-7.18-5.82-13-13-13s-13 5.82-13 13 5.82 13 13 13c3.23 0 6.18-1.18 8.45-3.13l.55.55v1.58l10 9.98 2.98-2.98-9.98-10zm-12 0c-4.97 0-9-4.03-9-9s4.03-9 9-9 9 4.03 9 9-4.03 9-9 9z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>
         </div>
         <div class="area-login">
             <button class="botao-secundario area-login__entrar">Login</button>
             <button class="botao-primario area-login__cadastrar">Cadastre-se</button>
         </div>
     </header>
+    <aside></aside>
 </body>
 
 </html>
