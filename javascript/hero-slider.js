@@ -6,7 +6,7 @@ $('.single-item').slick({
     autoplay: true,
     autoplaySpeed: 1000,
     dots: true,
-    arrows: true,
+    arrows: false,
     slidesToScroll: 1,
     slidesToShow: 1,
 });
@@ -29,10 +29,9 @@ botao_cadastro.textContent = mensagem_cadastro;
 
 ////COMEÇO DAS FUNÇÕES 
 function login() {
-    window.location.href = "login.html" //TE DIRECIONA PARA A PÁGINA DE LOGIN QUANDO CLICADA NO BOTÃO 
+    window.location.href = "LINKDOSITE.NGROK"
 }
-
 function cadastrar() {
-    window.location.href = "cadastrar.html" //TE DIRECIONA PARA A PÁGINA DE CADASTRO QUANDO CLICADA NO BOTÃO 
+    window.location.href = "LINKDOSITE.NGROK" //TE DIRECIONA PARA A PÁGINA DE CADASTRO QUANDO CLICADA NO BOTÃO 
 }
         ////FIM DAS FUNÇÕES

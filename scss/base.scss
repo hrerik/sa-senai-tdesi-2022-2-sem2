@@ -75,7 +75,9 @@ $espaco: $escala * 8px; // ! MESMO APLICA-SE AQUI
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-* {box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -150,7 +152,7 @@ body {
 
 .area-login {
     display: inline-flex;
-    gap: 8*$espaco;
+    gap: 8 * $espaco;
 
     &__entrar {
         padding: $espaco 2 * $espaco;
@@ -163,9 +165,9 @@ body {
 
 .header-principal {
     width: 100vw;
-    height: 12*$espaco;
+    height: 12 * $espaco;
 
-    padding: 2*$espaco 8*$espaco;
+    padding: 2 * $espaco 8 * $espaco;
 
     display: flex;
     justify-content: space-between;
@@ -180,31 +182,31 @@ body {
 }
 
 .subheader {
-    height: 12*$espaco;
+    height: 12 * $espaco;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     border-bottom: 1px solid $cinza75;
 
     &__nav {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 5*$espaco;
+        gap: 5 * $espaco;
 
         &__barra {
             display: inline-block;
             width: 1px;
-            height: 7*$espaco;
+            height: 7 * $espaco;
             background: $blue-saphire;
         }
 
         &__link {
             color: $blue-saphire;
             text-decoration: none;
-            
+
             &:hover {
                 text-decoration: underline;
                 cursor: pointer;
@@ -220,7 +222,7 @@ body {
 .single-item div {
     text-align: center;
     line-height: 200px;
-    background: #4D5061;
+    background: #4d5061;
     color: white;
     font-size: 50px;
 }
@@ -230,6 +232,9 @@ body {
     height: 100vh;
 
     background: $cinza75;
+
+    display: none;
+
     position: absolute;
     z-index: 1;
     top: 0;
@@ -239,12 +244,75 @@ body {
         position: relative;
 
         &__x {
-            width: 8*$espaco;
-            height: 8*$espaco;
+            width: 8 * $espaco;
+            height: 8 * $espaco;
 
             position: absolute;
             top: 0;
             right: 0;
         }
+    }
+}
+
+.secao-produto {
+    padding: 0 8 * $espaco;
+    // background: $granny-smith-apple;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            @include heading-3-regular;
+            color: $preto;
+            padding: 0;
+        }
+    }
+
+    &__slider {
+        display: flex;
+        gap: 100px;
+    }
+}
+
+.card-produto {
+    background-color: transparent;
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+
+    
+    &__agrupador {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    &:hover &__agrupador {
+        transform: rotateY(180deg);
+    }
+
+    &__frente,
+    &__tras {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        background-position: center;
+        backface-visibility: hidden;
+        border-radius: 16px;
+        background-image: url(../Livros/HTMLeCSS.jpeg);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+    }
+
+    &__frente {
+    }
+
+    &__tras {
+        transform: rotateY(180deg);
     }
 }
