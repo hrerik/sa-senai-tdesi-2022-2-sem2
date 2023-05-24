@@ -85,11 +85,10 @@
         <form action="inserir_usuario.php" method="post">
         <h1 class="digitar-sozinho"></h1>
         <label for="nome">nome:</label>
-        <input type="text" id="nome" name="nome">
+        <input type="text" id="nome" name="nome_usuario">
         <label for="senha">senha:</label>
-        <input type="password" id="senha" name="senha">
+        <input type="password" id="senha" name="senha_usuario">
             <button type="submit" id="botao-login" name="submit">login </button>
-        <div id="mensagem-erro" class="mensagem-erro"></div>
     </form>
     </div>
     

@@ -14,7 +14,7 @@ $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbname);
 }*/
 
 if(isset($_POST['submit'])){
-    print_r($_POST['nome']);
-    print_r($_POST['senha']);
+    print_r($_POST['nome_usuario]);
+    print_r($_POST['senha_usuario']);
     }
 ?>

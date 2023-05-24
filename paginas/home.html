@@ -6,13 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Estilização Básica -->
     <link rel="stylesheet" href="..\scss\base.css">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Inter:wght@300;700&display=swap"
         rel="stylesheet">
+
+    <!-- CSS Slick -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
 
     <title>Home</title>
 </head>
@@ -37,8 +45,8 @@
                 </svg>
             </div>
             <div class="area-login">
-                <button class="botao-secundario area-login__entrar">Login</button>
-                <button class="botao-primario area-login__cadastrar">Cadastre-se</button>
+                <button class="botao-secundario area-login__entrar" onclick="login()"> </button>
+                <button class="botao-primario area-login__cadastrar" onclick="cadastrar()"></button>
             </div>
         </section>
         <section class="subheader">
@@ -57,9 +65,43 @@
             </nav>
         </section>
     </header>
+
     <aside class="menu-lateral">
-        <nav></nav>
+        <nav>
+            <svg class="menu-lateral__nav__x feather feather-x" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+                xmlns="http://www.w3.org/2000/svg">
+                <line x1="18" x2="6" y1="6" y2="18" />
+                <line x1="6" x2="18" y1="6" y2="18" />
+            </svg>
+            <h2 class="menu-lateral__nav__titulo">Categorias</h2>
+            <ul>
+                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Lorem Ipsum</a></li>
+            </ul>
+        </nav>
     </aside>
+
+    <section class="hero-slider single-item">
+        <div class="height">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </section>
+
+    <main>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="../javascript/hero-slider.js"></script>
 </body>
 
 </html>

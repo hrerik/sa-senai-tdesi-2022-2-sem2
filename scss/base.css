@@ -114,4 +114,37 @@ body {
 .subheader__nav__link:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.single-item {
+  width: 100%;
+  height: 20%;
+}
+
+.single-item div {
+  text-align: center;
+  line-height: 200px;
+  background: #4D5061;
+  color: white;
+  font-size: 50px;
+}
+
+.menu-lateral {
+  width: 35%;
+  height: 100vh;
+  background: #bfbfbf;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.menu-lateral__nav {
+  position: relative;
+}
+.menu-lateral__nav__x {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }/*# sourceMappingURL=base.css.map */
