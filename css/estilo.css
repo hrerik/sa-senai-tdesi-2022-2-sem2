@@ -1,10 +1,16 @@
+@import "https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Inter:wght@300;700&display=swap";
 * {
   box-sizing: border-box;
-}
-
-body {
   margin: 0;
   padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .logomarca {
@@ -67,16 +73,16 @@ body {
   gap: 32px;
 }
 .area-login__entrar {
-  padding: 4px 8px;
+  padding: 8px 16px;
 }
 .area-login__cadastrar {
-  padding: 4px 8px;
+  padding: 8px 16px;
 }
 
 .header-principal {
   width: 100vw;
   height: 48px;
-  padding: 8px 32px;
+  padding: 0 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -109,7 +115,6 @@ body {
 }
 .subheader__nav__link {
   color: #13678a;
-  text-decoration: none;
 }
 .subheader__nav__link:hover {
   text-decoration: underline;
@@ -154,13 +159,19 @@ body {
   padding: 0 32px;
 }
 .secao-produto__header {
+  height: 60px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.secao-produto__header__titulo {
+  font: 600 32px "EB Garamond", serif;
 }
 .secao-produto__header a {
   font: 400 22.5px "EB Garamond", serif;
   color: #000000;
   padding: 0;
+  text-decoration: underline;
 }
 .secao-produto__slider {
   display: flex;
@@ -192,10 +203,41 @@ body {
   background-position: center;
   backface-visibility: hidden;
   border-radius: 16px;
-  background-image: url(../Livros/HTMLeCSS.jpeg);
   background-repeat: no-repeat;
   background-size: auto 100%;
 }
+.card-produto__frente {
+  background-image: url(../Livros/HTMLeCSS.jpeg);
+}
 .card-produto__tras {
+  padding: 16px 8px 32px;
   transform: rotateY(180deg);
-}/*# sourceMappingURL=base.css.map */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7490196078), rgba(0, 0, 0, 0.7490196078)), url(../Livros/HTMLeCSS.jpeg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-produto__titulo {
+  font: 600 32px "EB Garamond", serif;
+  color: #ffffff;
+}
+.card-produto__preco {
+  font: 600 32px "EB Garamond", serif;
+  background: -webkit-linear-gradient(0deg, #9aeba3, #13678a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer {
+  background: #13678a;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+.footer__info-agrupador {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

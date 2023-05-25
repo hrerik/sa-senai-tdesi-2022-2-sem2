@@ -1,88 +1,5 @@
-//* CORES
-// Tons Primários
-$maastricht-blue: #012030;
-$blue-saphire: #13678a;
-$verdigris: #45c4b0;
-$granny-smith-apple: #9aeba3;
-$tea-green: #dafdba;
-
-// Tons de Cinza
-$branco: #ffffff;
-$cinza90: #e6e6e6;
-$cinza75: #bfbfbf;
-$cinza50: #808080;
-$cinza25: #404040;
-$cinza10: #1a1a1a;
-$preto: #000000;
-
-// Degradês
-$degrade-verde-azul: linear-gradient(90deg, $granny-smith-apple, $blue-saphire);
-
-$degrade-botao-primario-hover: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), $degrade-verde-azul;
-
-//* TIPOGRAFIA
-// Fontes
-$garamond: "EB Garamond", serif;
-$inter: "Inter", sans-serif;
-
-@mixin heading-1-negrito {
-    font: 600 11.25 * $espaco $garamond;
-}
-@mixin heading-2-negrito {
-    font: 600 8 * $espaco $garamond;
-}
-@mixin heading-3-negrito {
-    font: 600 5.625 * $espaco $garamond;
-}
-@mixin heading-4-negrito {
-    font: 600 4 * $espaco $garamond;
-}
-
-@mixin heading-1-regular {
-    font: 400 11.25 * $espaco $garamond;
-}
-@mixin heading-2-regular {
-    font: 400 8 * $espaco $garamond;
-}
-@mixin heading-3-regular {
-    font: 400 5.625 * $espaco $garamond;
-}
-@mixin heading-4-regular {
-    font: 400 4 * $espaco $garamond;
-}
-
-@mixin paragrafo {
-    font: 300 3 * $espaco $inter;
-}
-@mixin destaque-1 {
-    font: 700 5.625 * $espaco $inter;
-}
-@mixin destaque-2 {
-    font: 700 4 * $espaco $inter;
-}
-
-//* EFEITOS
-@mixin sombra-texto {
-    text-shadow: $escala * 2px $escala * 2px $escala * 2px rgba(0, 0, 0, 0.25);
-}
-@mixin sombra-caixa {
-    box-shadow: $escala * 4px $escala * 4px $escala * 8px rgba(0, 0, 0, 0.5);
-}
-
-//* ESPAÇAMENTO
-$escala: 0.5; // ! DEFINIRÁ ESCALA PARA TODO O SITE -- MUDÁ-LA PODERÁ QUEBRÁ-LO
-$espaco: $escala * 8px; // ! MESMO APLICA-SE AQUI
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-}
+@import "variaveis";
+@import "reset";
 
 .logomarca {
     height: 9 * $espaco;
@@ -155,11 +72,11 @@ body {
     gap: 8 * $espaco;
 
     &__entrar {
-        padding: $espaco 2 * $espaco;
+        padding: 2 * $espaco 4 * $espaco;
     }
 
     &__cadastrar {
-        padding: $espaco 2 * $espaco;
+        padding: 2 * $espaco 4 * $espaco;
     }
 }
 
@@ -167,7 +84,7 @@ body {
     width: 100vw;
     height: 12 * $espaco;
 
-    padding: 2 * $espaco 8 * $espaco;
+    padding: 0 8 * $espaco;
 
     display: flex;
     justify-content: space-between;
@@ -205,7 +122,6 @@ body {
 
         &__link {
             color: $blue-saphire;
-            text-decoration: none;
 
             &:hover {
                 text-decoration: underline;
@@ -259,13 +175,21 @@ body {
     // background: $granny-smith-apple;
 
     &__header {
+        height: 15 * $espaco;
+
         display: flex;
         justify-content: space-between;
+        align-items: center;
+
+        &__titulo {
+            @include heading-2-negrito;
+        }
 
         a {
             @include heading-3-regular;
             color: $preto;
             padding: 0;
+            text-decoration: underline;
         }
     }
 
@@ -281,7 +205,6 @@ body {
     height: 300px;
     perspective: 1000px;
 
-    
     &__agrupador {
         position: relative;
         width: 100%;
@@ -304,15 +227,51 @@ body {
         background-position: center;
         backface-visibility: hidden;
         border-radius: 16px;
-        background-image: url(../Livros/HTMLeCSS.jpeg);
         background-repeat: no-repeat;
         background-size: auto 100%;
     }
 
     &__frente {
+        background-image: url(../Livros/HTMLeCSS.jpeg);
     }
 
     &__tras {
+        padding: 4 * $espaco 2 * $espaco 8 * $espaco;
         transform: rotateY(180deg);
+
+        background-image: linear-gradient($fundo-escuro75, $fundo-escuro75), url(../Livros/HTMLeCSS.jpeg);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
+
+    &__titulo {
+        @include heading-2-negrito;
+        color: $branco;
+    }
+
+    &__preco {
+        @include heading-2-negrito;
+        background: -webkit-linear-gradient(0deg, $granny-smith-apple, $blue-saphire);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.footer {
+    background: $blue-saphire;
+    color: $branco;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8*$espaco;
+
+    &__info-agrupador {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
 }

@@ -1,0 +1,78 @@
+@import "https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Inter:wght@300;700&display=swap";
+
+//* CORES
+// Tons Primários
+$maastricht-blue: #012030;
+$blue-saphire: #13678a;
+$verdigris: #45c4b0;
+$granny-smith-apple: #9aeba3;
+$tea-green: #dafdba;
+
+// Tons de Cinza
+$branco: #ffffff;
+$cinza90: #e6e6e6;
+$cinza75: #bfbfbf;
+$cinza50: #808080;
+$cinza25: #404040;
+$cinza10: #1a1a1a;
+$preto: #000000;
+
+$fundo-escuro75: #000000bf;
+
+// Degradês
+$degrade-verde-azul: linear-gradient(90deg, $granny-smith-apple, $blue-saphire);
+
+$degrade-botao-primario-hover: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), $degrade-verde-azul;
+
+//* TIPOGRAFIA
+// Fontes
+$garamond: "EB Garamond", serif;
+$inter: "Inter", sans-serif;
+
+@mixin heading-1-negrito {
+    font: 600 11.25 * $espaco $garamond;
+}
+@mixin heading-2-negrito {
+    font: 600 8 * $espaco $garamond;
+}
+@mixin heading-3-negrito {
+    font: 600 5.625 * $espaco $garamond;
+}
+@mixin heading-4-negrito {
+    font: 600 4 * $espaco $garamond;
+}
+
+@mixin heading-1-regular {
+    font: 400 11.25 * $espaco $garamond;
+}
+@mixin heading-2-regular {
+    font: 400 8 * $espaco $garamond;
+}
+@mixin heading-3-regular {
+    font: 400 5.625 * $espaco $garamond;
+}
+@mixin heading-4-regular {
+    font: 400 4 * $espaco $garamond;
+}
+
+@mixin paragrafo {
+    font: 300 3 * $espaco $inter;
+}
+@mixin destaque-1 {
+    font: 700 5.625 * $espaco $inter;
+}
+@mixin destaque-2 {
+    font: 700 4 * $espaco $inter;
+}
+
+//* EFEITOS
+@mixin sombra-texto {
+    text-shadow: $escala * 2px $escala * 2px $escala * 2px rgba(0, 0, 0, 0.25);
+}
+@mixin sombra-caixa {
+    box-shadow: $escala * 4px $escala * 4px $escala * 8px rgba(0, 0, 0, 0.5);
+}
+
+//* ESPAÇAMENTO
+$escala: 0.5; // ! DEFINIRÁ ESCALA PARA TODO O SITE -- MUDÁ-LA PODERÁ QUEBRÁ-LO
+$espaco: $escala * 8px; // ! MESMO APLICA-SE AQUI
