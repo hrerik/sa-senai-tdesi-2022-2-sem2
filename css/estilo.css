@@ -82,10 +82,13 @@ a {
 .header-principal {
   width: 100vw;
   height: 48px;
+  background: #ffffff;
   padding: 0 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: 1;
   border-bottom: 1px solid #bfbfbf;
 }
 
@@ -94,7 +97,12 @@ a {
   height: 32px;
 }
 
+.fix-margin {
+  height: 1px;
+}
+
 .subheader {
+  margin-top: 48px;
   height: 48px;
   display: flex;
   align-items: center;
@@ -128,10 +136,29 @@ a {
 
 .single-item div {
   text-align: center;
-  line-height: 200px;
-  background: #4d5061;
+  height: 300px;
   color: white;
   font-size: 50px;
+}
+
+.hero-slider div {
+  background-size: cover;
+  background-position: center;
+}
+.hero-slider__1 {
+  background: url("/banners/Frete-gratis-2022-5-Banner-Topo-Banner-Home-Desktop.jpg");
+}
+.hero-slider__2 {
+  background: url("/banners/destino-brasil-home-desktop.jpg");
+}
+.hero-slider__3 {
+  background: url("/banners/grandes-editoras-23-home-desk.png");
+}
+.hero-slider__4 {
+  background: url("/banners/lancamentos-full-banner-desktop.png");
+}
+.hero-slider__5 {
+  background: url("/banners/liquidacao-literaria-home-desk.jpg");
 }
 
 .menu-lateral {
@@ -140,7 +167,7 @@ a {
   background: #bfbfbf;
   display: none;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
 }
@@ -157,6 +184,7 @@ a {
 
 .secao-produto {
   padding: 0 32px;
+  margin-bottom: 48px;
 }
 .secao-produto__header {
   height: 60px;
@@ -169,7 +197,7 @@ a {
 }
 .secao-produto__header a {
   font: 400 22.5px "EB Garamond", serif;
-  color: #000000;
+  color: #13678a;
   padding: 0;
   text-decoration: underline;
 }
@@ -225,6 +253,7 @@ a {
 .card-produto__preco {
   font: 600 32px "EB Garamond", serif;
   background: -webkit-linear-gradient(0deg, #9aeba3, #13678a);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -233,11 +262,68 @@ a {
   background: #13678a;
   color: #ffffff;
   display: flex;
-  justify-content: space-between;
-  padding: 0 32px;
+  gap: 128px;
+  padding: 64px 128px;
 }
 .footer__info-agrupador {
   display: flex;
   flex-direction: column;
+  gap: 40px;
+  flex-grow: 1;
+}
+.footer__info__redes {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.footer__info__redes__chamada {
+  font: 700 16px "Inter", sans-serif;
+}
+.footer__info__redes__icones {
+  display: inline-flex;
+  gap: 16px;
+  color: #ffffff;
+}
+.footer__info__redes__icones svg {
+  width: 20px;
+  height: 20px;
+}
+.footer__info__companhia {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.footer__info__companhia p {
+  font: 700 12px "Inter", sans-serif;
+}
+.footer__barra {
+  width: 2px;
+  background: #ffffff;
+}
+.footer__info__links {
+  display: flex;
   justify-content: space-between;
+  flex-grow: 2;
+}
+.footer__info__links__agrupador {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer__info__links__agrupador ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer__info__links__titulo {
+  font: 700 16px "Inter", sans-serif;
+}
+.footer__info__links__link {
+  font: 300 12px "Inter", sans-serif;
+  color: #ffffff;
+}
+.footer__info__links__link:hover {
+  text-decoration: underline;
 }

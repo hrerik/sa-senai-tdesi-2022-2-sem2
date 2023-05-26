@@ -58,6 +58,11 @@ $inter: "Inter", sans-serif;
 @mixin paragrafo {
     font: 300 3 * $espaco $inter;
 }
+
+@mixin paragrafo-negrito {
+    font: 700 3 * $espaco $inter;
+}
+
 @mixin destaque-1 {
     font: 700 5.625 * $espaco $inter;
 }
