@@ -1,0 +1,85 @@
+.footer {
+  background: $blue-saphire;
+  color: $branco;
+
+  display: flex;
+  gap: 32 * $espaco;
+  padding: 16 * $espaco 32 * $espaco;
+
+  &__info-agrupador {
+    display: flex;
+    flex-direction: column;
+    gap: 10 * $espaco;
+    flex-grow: 1;
+  }
+
+  &__info__redes {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4 * $espaco;
+
+    &__chamada {
+      @include destaque-2;
+    }
+
+    &__icones {
+      display: inline-flex;
+      gap: 4 * $espaco;
+
+      color: $branco;
+
+      svg {
+        width: 5 * $espaco;
+        height: 5 * $espaco;
+      }
+    }
+  }
+
+  &__info__companhia {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4 * $espaco;
+
+    p {
+      @include paragrafo-negrito;
+    }
+  }
+
+  &__barra {
+    width: 2px;
+    background: $branco;
+  }
+
+  &__info__links {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 2;
+
+    &__agrupador {
+      display: flex;
+      flex-direction: column;
+      gap: 4 * $espaco;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 3 * $espaco;
+      }
+    }
+
+    &__titulo {
+      @include destaque-2;
+    }
+
+    &__link {
+      @include paragrafo;
+      color: $branco;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

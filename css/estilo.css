@@ -13,31 +13,6 @@ a {
   text-decoration: none;
 }
 
-.logomarca {
-  height: 36px;
-}
-
-.aba-pesquisa {
-  width: 320px;
-  height: 28px;
-  border: #13678a solid 2px;
-  border-radius: 14px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.aba-pesquisa__input {
-  font: 300 12px "Inter", sans-serif;
-  width: 272px;
-  height: 100%;
-  background: none;
-  border: none;
-}
-.aba-pesquisa__lupa {
-  width: 20px;
-  height: 20px;
-}
-
 .botao-primario {
   font: 700 16px "Inter", sans-serif;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
@@ -68,15 +43,26 @@ a {
   cursor: pointer;
 }
 
-.area-login {
-  display: inline-flex;
-  gap: 32px;
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+  width: 10px;
 }
-.area-login__entrar {
-  padding: 8px 16px;
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #bfbfbf;
+  border-radius: 5px;
 }
-.area-login__cadastrar {
-  padding: 8px 16px;
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #808080;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
 }
 
 .header-principal {
@@ -95,6 +81,42 @@ a {
 .botao-sidebar {
   width: 32px;
   height: 32px;
+}
+
+.area-login {
+  display: inline-flex;
+  gap: 32px;
+}
+.area-login__entrar {
+  padding: 8px 16px;
+}
+.area-login__cadastrar {
+  padding: 8px 16px;
+}
+
+.logomarca {
+  height: 36px;
+}
+
+.aba-pesquisa {
+  width: 320px;
+  height: 28px;
+  border: #13678a solid 2px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.aba-pesquisa__input {
+  font: 300 12px "Inter", sans-serif;
+  width: 272px;
+  height: 100%;
+  background: none;
+  border: none;
+}
+.aba-pesquisa__lupa {
+  width: 20px;
+  height: 20px;
 }
 
 .fix-margin {
@@ -127,6 +149,60 @@ a {
 .subheader__nav__link:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.menu-lateral {
+  display: none;
+  width: 35%;
+  height: 100vh;
+  padding: 16px 24px;
+  background: #ffffff;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  overflow: hidden auto;
+}
+.menu-lateral__fundo {
+  width: calc(65vw - 6px);
+  height: 100vh;
+  background: #404040;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.menu-lateral__nav {
+  position: relative;
+}
+.menu-lateral__nav__titulo {
+  font: 600 45px "EB Garamond", serif;
+  margin-bottom: 12px;
+}
+.menu-lateral__nav__subtitulo {
+  font: 400 32px "EB Garamond", serif;
+  margin-bottom: 4px;
+}
+.menu-lateral__nav__lista {
+  margin-left: 12px;
+  margin-bottom: 16px;
+  font: 400 22.5px "EB Garamond", serif;
+}
+.menu-lateral__nav__lista li a {
+  color: #1a1a1a;
+}
+.menu-lateral__nav__lista li a:hover, .menu-lateral__nav__lista li a:focus-within {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  text-decoration: underline;
+  color: #45c4b0;
+  font-weight: 700;
+}
+.menu-lateral__nav__x {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .single-item {
@@ -162,26 +238,91 @@ a {
   background: url("/banners/liquidacao-literaria-home-desk.jpg");
 }
 
-.menu-lateral {
-  width: 35%;
-  height: 100vh;
-  background: #bfbfbf;
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
+.secao-produto {
+  padding: 0 32px;
+  margin-bottom: 80px;
 }
-.menu-lateral__nav {
-  position: relative;
+.secao-produto__header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.menu-lateral__nav__x {
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  top: 0;
-  right: 0;
+.secao-produto__header__titulo {
+  font: 600 32px "EB Garamond", serif;
+}
+.secao-produto__header a {
+  font: 400 22.5px "EB Garamond", serif;
+  color: #13678a;
+  padding: 0;
+  text-decoration: underline;
+}
+.secao-produto__slider {
+  display: flex;
+  gap: 100px;
 }
 
+.card-produto {
+  background-color: transparent;
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+}
+.card-produto:hover {
+  cursor: pointer;
+}
+.card-produto__agrupador {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.card-produto:hover .card-produto__agrupador {
+  transform: scale(1.05, 1.05) rotateY(180deg);
+}
+.card-produto__frente, .card-produto__tras {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  background-position: center;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+.card-produto__frente {
+  background-image: url(../Livros/HTMLeCSS.jpeg);
+}
+.card-produto__tras {
+  padding: 16px 8px 32px;
+  transform: scale(1.05, 1.05) rotateY(180deg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7490196078), rgba(0, 0, 0, 0.7490196078)), url(../Livros/HTMLeCSS.jpeg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-produto__titulo {
+  font: 600 32px "EB Garamond", serif;
+  color: #ffffff;
+}
+.card-produto__preco {
+  font: 700 16px "Inter", sans-serif;
+  font-size: 32px;
+  background: -webkit-linear-gradient(0deg, #9aeba3, #13678a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes destaque {
+  from {
+    scale: 1 1;
+  }
+}
 .secao-categoria {
   padding: 0 32px;
   margin-bottom: 80px;
@@ -200,6 +341,12 @@ a {
   flex-direction: column;
   gap: 8px;
   overflow: hidden;
+  transition: 200ms;
+}
+.secao-categoria__item:hover {
+  cursor: pointer;
+  scale: 1.1 1.1;
+  box-shadow: 12px 12px 4px -4px rgba(0, 0, 0, 0.5);
 }
 .secao-categoria__item > * + div {
   width: 100%;
@@ -257,82 +404,6 @@ a {
 }
 .secao-categoria__item-4 > div + div {
   background: inherit;
-}
-
-.secao-produto {
-  padding: 0 32px;
-  margin-bottom: 80px;
-}
-.secao-produto__header {
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.secao-produto__header__titulo {
-  font: 600 32px "EB Garamond", serif;
-}
-.secao-produto__header a {
-  font: 400 22.5px "EB Garamond", serif;
-  color: #13678a;
-  padding: 0;
-  text-decoration: underline;
-}
-.secao-produto__slider {
-  display: flex;
-  gap: 100px;
-}
-
-.card-produto {
-  background-color: transparent;
-  width: 200px;
-  height: 300px;
-  perspective: 1000px;
-}
-.card-produto__agrupador {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-.card-produto:hover .card-produto__agrupador {
-  transform: rotateY(180deg);
-}
-.card-produto__frente, .card-produto__tras {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  background-position: center;
-  backface-visibility: hidden;
-  border-radius: 16px;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-}
-.card-produto__frente {
-  background-image: url(../Livros/HTMLeCSS.jpeg);
-}
-.card-produto__tras {
-  padding: 16px 8px 32px;
-  transform: rotateY(180deg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7490196078), rgba(0, 0, 0, 0.7490196078)), url(../Livros/HTMLeCSS.jpeg);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-.card-produto__titulo {
-  font: 600 32px "EB Garamond", serif;
-  color: #ffffff;
-}
-.card-produto__preco {
-  font: 600 32px "EB Garamond", serif;
-  background: -webkit-linear-gradient(0deg, #9aeba3, #13678a);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .footer {

@@ -1,0 +1,182 @@
+//* HEADER
+
+.header-principal {
+  width: 100vw;
+  height: 12 * $espaco;
+
+  background: $branco;
+  padding: 0 8 * $espaco;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  z-index: 1;
+
+  border-bottom: 1px solid $cinza75;
+}
+
+.botao-sidebar {
+  width: 8 * $espaco;
+  height: 8 * $espaco;
+}
+
+.area-login {
+  display: inline-flex;
+  gap: 8 * $espaco;
+
+  &__entrar {
+    padding: 2 * $espaco 4 * $espaco;
+  }
+
+  &__cadastrar {
+    padding: 2 * $espaco 4 * $espaco;
+  }
+}
+
+.logomarca {
+  height: 9 * $espaco;
+}
+
+.aba-pesquisa {
+  width: 80 * $espaco;
+  height: 7 * $espaco;
+
+  border: $blue-saphire solid 2px;
+  border-radius: 3.5 * $espaco;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__input {
+    @include paragrafo();
+    width: 68 * $espaco;
+    height: 100%;
+
+    background: none;
+    border: none;
+  }
+
+  &__lupa {
+    width: 5 * $espaco;
+    height: 5 * $espaco;
+  }
+}
+
+.fix-margin {
+  height: 1px;
+}
+
+//* SUBHEADER
+
+.subheader {
+  margin-top: 12 * $espaco;
+  height: 12 * $espaco;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-bottom: 1px solid $cinza75;
+
+  &__nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5 * $espaco;
+
+    &__barra {
+      display: inline-block;
+      width: 1px;
+      height: 7 * $espaco;
+      background: $blue-saphire;
+    }
+
+    &__link {
+      color: $blue-saphire;
+
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+//* MENU LATERAL
+
+.menu-lateral {
+  // TODO implementar forma de exibir e esconder menu
+  // fora isso menu está pronto
+  display: none;
+
+  width: 35%;
+  height: 100vh;
+
+  padding: 4 * $espaco 6 * $espaco;
+
+  background: $branco;
+
+  // display: none;
+
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+
+  overflow: hidden auto;
+
+  &__fundo {
+    width: calc(65vw - 6px);
+    height: 100vh;
+
+    background: $cinza25;
+    opacity: 0.5;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
+  &__nav {
+    position: relative;
+
+    &__titulo {
+      @include heading-1-negrito;
+      margin-bottom: 3 * $espaco;
+    }
+
+    &__subtitulo {
+      @include heading-2-regular;
+      margin-bottom: $espaco;
+    }
+
+    &__lista {
+      margin-left: 3 * $espaco;
+      margin-bottom: 4 * $espaco;
+      @include heading-3-regular;
+
+      li a {
+        color: $cinza10;
+        &:hover,
+        &:focus-within {
+          @include sombra-texto;
+          text-decoration: underline;
+          color: $verdigris;
+          font-weight: 700;
+        }
+      }
+    }
+
+    &__x {
+      width: 8 * $espaco;
+      height: 8 * $espaco;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}

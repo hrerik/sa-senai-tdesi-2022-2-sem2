@@ -1,0 +1,35 @@
+.botao-primario {
+  @include destaque-2();
+  @include sombra-texto();
+  color: $branco;
+
+  @include sombra-caixa();
+  background: $degrade-verde-azul;
+  padding: 3 * $espaco 4 * $espaco;
+
+  border: none;
+  border-radius: 100 * $espaco;
+
+  &:hover {
+      background: $degrade-botao-primario-hover;
+      cursor: pointer;
+  }
+}
+
+.botao-secundario {
+  @include destaque-2();
+  @include sombra-texto();
+  color: $cinza25;
+
+  @include sombra-caixa();
+  background: $cinza90;
+  padding: 3 * $espaco 4 * $espaco;
+
+  border: none;
+  border-radius: 100 * $espaco;
+
+  &:hover {
+      background: $cinza75;
+      cursor: pointer;
+  }
+}
