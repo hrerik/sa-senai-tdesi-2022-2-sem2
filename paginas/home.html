@@ -21,7 +21,7 @@
 <body>
     <header>
         <section class="header-principal">
-            <svg class="botao-sidebar" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="botao-sidebar" onclick="exibirMenuLateral()" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19,8H5A1,1,0,0,1,5,6H19a1,1,0,0,1,0,2Z" fill="#13678a" />
                 <path d="M19,13H5a1,1,0,0,1,0-2H19a1,1,0,0,1,0,2Z" fill="#13678a" />
                 <path d="M19,18H5a1,1,0,0,1,0-2H19a1,1,0,0,1,0,2Z" fill="#13678a" />
@@ -60,13 +60,9 @@
         </section>
     </header>
 
-    <aside class="menu-lateral">
+    <aside class="menu-lateral" id="menu-lateral">
         <nav class="menu-lateral__nav">
-            <svg class="menu-lateral__nav__x feather feather-x" fill="none" stroke="currentColor" stroke-linecap="round"
-                stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <line x1="18" x2="6" y1="6" y2="18" />
-                <line x1="6" x2="18" y1="6" y2="18" />
-            </svg>
+            <svg onclick="esconderMenuLateral()" class="menu-lateral__nav__x feather feather-x" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="18" x2="6" y1="6" y2="18" /><line x1="6" x2="18" y1="6" y2="18" /></svg>
             <h2 class="menu-lateral__nav__titulo">Categorias</h2>
             <ul class="menu-lateral__nav__lista menu-lateral__nav__especiais">
                 <li><a href="#">Mais Vendidos</a></li>
@@ -110,7 +106,7 @@
                 <li><a href="#">Central de Ajuda</a></li>
             </ul>
         </nav>
-        <div class="menu-lateral__fundo"></div>
+        <div onclick="esconderMenuLateral()" class="menu-lateral__fundo"></div>
     </aside>
 
     <main>
@@ -441,6 +437,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="../javascript/hero-slider.js"></script>
+    <script src="../javascript/menu-lateral.js"></script>
 </body>
 
 </html>

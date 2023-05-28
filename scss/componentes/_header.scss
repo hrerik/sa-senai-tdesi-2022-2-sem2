@@ -20,6 +20,10 @@
 .botao-sidebar {
   width: 8 * $espaco;
   height: 8 * $espaco;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .area-login {
@@ -132,8 +136,8 @@
     width: calc(65vw - 6px);
     height: 100vh;
 
-    background: $cinza25;
-    opacity: 0.5;
+    background: $cinza10;
+    opacity: 0.75;
 
     position: fixed;
     top: 0;
@@ -177,6 +181,10 @@
       position: absolute;
       top: 0;
       right: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

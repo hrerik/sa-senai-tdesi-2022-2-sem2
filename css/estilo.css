@@ -82,6 +82,9 @@ a {
   width: 32px;
   height: 32px;
 }
+.botao-sidebar:hover {
+  cursor: pointer;
+}
 
 .area-login {
   display: inline-flex;
@@ -166,8 +169,8 @@ a {
 .menu-lateral__fundo {
   width: calc(65vw - 6px);
   height: 100vh;
-  background: #404040;
-  opacity: 0.5;
+  background: #1a1a1a;
+  opacity: 0.75;
   position: fixed;
   top: 0;
   right: 0;
@@ -203,6 +206,9 @@ a {
   position: absolute;
   top: 0;
   right: 0;
+}
+.menu-lateral__nav__x:hover {
+  cursor: pointer;
 }
 
 .single-item {
