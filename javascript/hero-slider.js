@@ -29,7 +29,7 @@ botao_cadastro.textContent = mensagem_cadastro;
 
 ////COMEÇO DAS FUNÇÕES 
 function login() {
-    window.location.href = "LINKDOSITE.NGROK"
+    window.location.href = "http://localhost/SA/Login_Luxida.php";
 }
 function cadastrar() {
     window.location.href = "LINKDOSITE.NGROK" //TE DIRECIONA PARA A PÁGINA DE CADASTRO QUANDO CLICADA NO BOTÃO 

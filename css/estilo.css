@@ -320,11 +320,6 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
-@keyframes destaque {
-  from {
-    scale: 1 1;
-  }
-}
 .secao-categoria {
   padding: 0 32px;
   margin-bottom: 80px;
