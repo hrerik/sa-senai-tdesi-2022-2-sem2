@@ -93,7 +93,7 @@
       background-color: #b0b6b5;
       color: rgb(0, 0, 0);
       cursor: pointer;
-      padding-left: 20px;
+      padding-left: 30px;
       margin-top: 10px;
       margin-left: 350px;
     }
@@ -112,7 +112,7 @@
 
 <body>
   <div class="container">
-    <form action="inserir_usuario.php" method="post">
+    <form action="" method="post">
       <img src="https://github.com/hrerik/sa-senai-tdesi-2022-2-sem2/blob/main/logos/Luxida%20Icon.png?raw=true" alt=""
         width="100px" height="100px">
       <h1 class="digitar-sozinho"></h1>
@@ -120,7 +120,8 @@
       <input type="text" id="nome" name="nome_usuario" placeholder="Seu usuário aqui!">
       <label for="senha"></label>
       <input type="password" id="senha" name="senha_usuario" placeholder="Sua senha aqui!">
-      <button type="submit" id="botao-login" name="submit" class="botao_login">Sign Up!</button>
+      <button type="submit" id="botao-login" name="submit" class="botao_login">Login!</button>
+      <p id="form-text"></p>
     </form>
   </div>
   <script>
@@ -133,21 +134,21 @@
   <?php
   require_once('conexao_php.php');
 
-  if(isset($_POST['login'])) {
-      $nome = $_POST['nome'];
-      $senha = $_POST['senha'];
+ 
+      $nome = $_POST['nome_usuario'];
+      $senha = $_POST['senha_usuario'];
       
-      $sql = "SELECT nome, senha FROM usuario WHERE nome = '$nome' && senha = '$senha'";
-      $result = mysqli_query($conn, $sql);
+      $sql = "SELECT nome_usuario, senha_usuario FROM usuario WHERE nome_usuario = '$nome' && senha_usuario = '$senha'";
+      $result = mysqli_query($conexao, $sql);
       
       if (mysqli_num_rows($result) > 0) { // caso o login seja sucedido, redirecione
-        header("Location: <colocar o caminho");
+        header ("Location: ")
       } else {
-        echo "<script>document.querySelector('#form-text').innerText = 'E-mail ou senha inválidos'</script>";
+        echo "Senha inválida e/ou Usuário inválido!";
       }
-  }
   
-  mysqli_close($conn);
+  
+  mysqli_close($conexao);
 ?>
 
 </body>
