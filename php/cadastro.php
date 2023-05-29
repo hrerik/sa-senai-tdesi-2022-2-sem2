@@ -1,20 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-    <style>
- body {
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
-      padding-top: 200px;
+      padding-top: 70px;
       justify-content: center;
       background-color: rgb(223, 221, 221);
-      background-image: url("https://i0.wp.com/diariorp.com.br/wp-content/uploads/2018/08/fundo-login-diario.jpg?fit=300%2C168&ssl=1");
+      background-image: url("https://images6.alphacoders.com/389/389877.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -47,11 +47,11 @@
 
     div {
       width: 500px;
-      height: 300px;
+      height: 400px;
       border: 2px solid black;
       display: block;
       background-color: rgb(223, 221, 221);
-      background-image: url("https://i.pinimg.com/236x/4f/b7/35/4fb735450ccd37f844681e08fbaca7f8.jpg");
+      background-image: url("https://img.freepik.com/vetores-gratis/fundo-branco-e-cinza-brilhante-com-linhas-onduladas_1017-25101.jpg?w=2000");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -61,7 +61,6 @@
       flex-direction: column;
       color: #fff;
       text-align: center;
-
     }
 
     form {
@@ -74,13 +73,13 @@
       font-size: large;
       display: flex;
       justify-content: center;
-      color: rgb(255, 255, 255);
+      color: rgb(252, 252, 252);
       flex-direction: row;
     }
 
     input {
       width: 50%;
-      height: 15px;
+      height: 20px;
       border: none;
       border-radius: 5px;
       margin-bottom: 5px;
@@ -91,7 +90,7 @@
       padding: 5px;
       border: none;
       border-radius: 5px;
-      background-color: #11e4d2;
+      background-color: #b0b6b5;
       color: rgb(0, 0, 0);
       cursor: pointer;
       padding-left: 20px;
@@ -104,26 +103,34 @@
       flex-direction: row;
     }
 
-    </style>
+    h1 {
+      color: black;
+      font-size: 14;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <form action="inserir_usuario.php" method="post">
-        <h1 class="digitar-sozinho"></h1>
-        <label for="nome">Seu usuário:</label>
-        <input type="text" id="nome" name="nome_usuario">
-        <label for="senha">Sua Senha:</label>
-        <input type="password" id="senha" name="senha_usuario">
-            <button type="submit" id="botao-login" name="submit" class="botao_login">Sign Up!</button>
+  <div class="container">
+    <form action="inserir_usuario.php" method="post">
+      <img src="https://github.com/hrerik/sa-senai-tdesi-2022-2-sem2/blob/main/logos/Luxida%20Icon.png?raw=true" alt=""
+        width="100px" height="100px">
+      <h1 class="digitar-sozinho"></h1>
+      <label for="nome"></label>
+      <input type="text" id="nome" name="nome_usuario" placeholder="Seu usuário aqui!">
+      <label for="senha"></label>
+      <input type="password" id="senha" name="senha_usuario" placeholder="Sua senha aqui!">
+      <button type="submit" id="botao-login" name="submit" class="botao_login">Sign Up!</button>
     </form>
-    </div>
-    <script>
-        window.onload = function () {
-          const msg = "Olá, Seja bem-vindo faça seu Cadastro!";
-          const sozinho = document.querySelector('.digitar-sozinho');
-          sozinho.textContent = msg;
-        }
-      </script>
-    
+  </div>
+  <script>
+    window.onload = function () {
+      const msg = "Olá, Seja bem-vindo faça seu Cadastro!";
+      const sozinho = document.querySelector('.digitar-sozinho');
+      sozinho.textContent = msg;
+    }
+  </script>
+
 </body>
+
 </html>
