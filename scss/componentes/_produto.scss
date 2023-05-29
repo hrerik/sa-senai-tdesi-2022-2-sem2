@@ -1,3 +1,5 @@
+// SCSS para seção de produtos 
+
 .secao-produto {
   padding: 0 8 * $espaco;
   margin-bottom: 20 * $espaco;
@@ -23,11 +25,12 @@
 
   &__slider {
     display: flex;
-    gap: 100px;
+    justify-content: space-between;
   }
 }
 
-.card-produto {
+// Item de cada produto
+.card-produto { 
   background-color: transparent;
   width: 200px;
   height: 300px;

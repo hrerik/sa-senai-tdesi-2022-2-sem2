@@ -1,15 +1,18 @@
+// Seção dos banner principais que aparecem por primeiro na página
+
+// Customização de itens
 .single-item {
   width: 100%;
   height: 20%;
 }
 .single-item div {
   text-align: center;
-  // line-height: 300px;
   height: 300px;
   color: white;
   font-size: 50px;
 }
 
+// Definição de fundos
 .hero-slider {
   div {
     margin-bottom: 20 * $espaco;

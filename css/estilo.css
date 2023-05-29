@@ -43,24 +43,20 @@ a {
   cursor: pointer;
 }
 
-/* Designing for scroll-bar */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #bfbfbf;
   border-radius: 5px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #808080;
   border-radius: 5px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #404040;
 }
@@ -265,7 +261,7 @@ a {
 }
 .secao-produto__slider {
   display: flex;
-  gap: 100px;
+  justify-content: space-between;
 }
 
 .card-produto {

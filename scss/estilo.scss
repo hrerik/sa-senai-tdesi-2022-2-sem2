@@ -1,3 +1,31 @@
+//? Guia rápido de SCSS
+
+//* ÍNDEX
+// 1. Criando um arquivo
+// 2. Importando um arquivo
+// 3. Compactando arquivos scss
+// 4. Usando de estilos já criados
+
+//* 1. Criando um arquivo
+// Crie um arquivo [.scss] e nele insira os estilos que quiser.
+
+// Se ele servir para customizar um único elemento ponha-o na pasta [base],
+// senão ponha na [componentes]
+
+// Além disso ponha um '_' antes do nome do arquivo para que o compilador
+// não, bem, o compile... O único arquivo que será compilado é o [estilo.scss]
+
+//* 2. Importando um arquivo
+// Venha de volta ao [estilo.scss] e use [@import "pasta/nome-arquivo";] --
+// não é necessário por @import dentro dos outros arquivos; ao trazer pro [estilo.scss]
+// ele já pega os outros estilos
+
+//* 3. Compilando arquivos
+// Dentro dum terminal (preferência cmd) apenas escreva [gulp]
+
+// Caso não tenha gulp instalado
+
+
 @import "base/variaveis";
 @import "base/reset";
 @import "base/botao";
