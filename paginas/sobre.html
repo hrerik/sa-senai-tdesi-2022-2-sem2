@@ -21,7 +21,7 @@
                 <path d="M19,13H5a1,1,0,0,1,0-2H19a1,1,0,0,1,0,2Z" fill="#13678a" />
                 <path d="M19,18H5a1,1,0,0,1,0-2H19a1,1,0,0,1,0,2Z" fill="#13678a" />
             </svg>
-            <img class="logomarca" src="../logos/luxida-logo.png" alt="Luxida">
+            <img class="logomarca" src="../logos/luxida-logo.png" alt="Luxida" onclick="home()">
             <div class="aba-pesquisa">
                 <input class="aba-pesquisa__input" placeholder="Pesquise por livros, autores ou palavras-chaves"
                     type="text">
@@ -33,8 +33,8 @@
                 </svg>
             </div>
             <div class="area-login">
-                <button class="botao-secundario area-login__entrar" onclick="login()"></button>
-                <button class="botao-primario area-login__cadastrar" onclick="cadastrar()"></button>
+                <button class="botao-secundario area-login__entrar" onclick="login()">Login</button>
+                <button class="botao-primario area-login__cadastrar" onclick="cadastrar()">Cadastra-se</button>
             </div>
         </section>
         <div class="fix-margin"></div>
@@ -175,5 +175,7 @@
     <!-- Nativos -->
     <script src="../javascript/hero-slider.js"></script>
     <script src="../javascript/menu-lateral.js"></script>
+    <script src="../javascript/produtos.js"></script>
+    <script src="../javascript/redirecionamento.js"></script>
 </body>
 </html>

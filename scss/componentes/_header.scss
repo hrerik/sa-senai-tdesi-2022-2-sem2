@@ -41,6 +41,9 @@
 
 .logomarca {
   height: 9 * $espaco;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .aba-pesquisa {
@@ -112,8 +115,6 @@
 //* MENU LATERAL
 
 .menu-lateral {
-  // TODO implementar forma de exibir e esconder menu
-  // fora isso menu está pronto
   display: none;
 
   width: 35%;
@@ -133,7 +134,7 @@
   overflow: hidden auto;
 
   &__fundo {
-    width: calc(65vw - 6px);
+    width:  65vw;
     height: 100vh;
 
     background: $cinza10;

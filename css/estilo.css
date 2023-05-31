@@ -96,6 +96,9 @@ a {
 .logomarca {
   height: 36px;
 }
+.logomarca:hover {
+  cursor: pointer;
+}
 
 .aba-pesquisa {
   width: 320px;
@@ -163,7 +166,7 @@ a {
   overflow: hidden auto;
 }
 .menu-lateral__fundo {
-  width: calc(65vw - 6px);
+  width: 65vw;
   height: 100vh;
   background: #1a1a1a;
   opacity: 0.75;
