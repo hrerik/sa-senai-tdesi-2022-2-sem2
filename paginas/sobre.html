@@ -5,18 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Estilização Básica -->
     <!--! JAMAIS modifique estilos no arquivo [../estilo.css] -->
     <!--? Acessar arquivo estilo.scss para instruções -->
     <link rel="stylesheet" href="..\css\estilo.css">
+    <link rel="stylesheet" href="../css/estilo_sobre.css">
 
     <title>Sobre nós — Livraria Luxida</title>
 </head>
+
 <body>
     <header>
         <section class="header-principal">
-            <svg class="botao-sidebar" onclick="exibirMenuLateral()" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="botao-sidebar" onclick="exibirMenuLateral()" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
                 <path d="M19,8H5A1,1,0,0,1,5,6H19a1,1,0,0,1,0,2Z" fill="#13678a" />
                 <path d="M19,13H5a1,1,0,0,1,0-2H19a1,1,0,0,1,0,2Z" fill="#13678a" />
                 <path d="M19,18H5a1,1,0,0,1,0-2H19a1,1,0,0,1,0,2Z" fill="#13678a" />
@@ -57,7 +60,12 @@
 
     <aside class="menu-lateral" id="menu-lateral">
         <nav class="menu-lateral__nav">
-            <svg onclick="esconderMenuLateral()" class="menu-lateral__nav__x feather feather-x" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="18" x2="6" y1="6" y2="18" /><line x1="6" x2="18" y1="6" y2="18" /></svg>
+            <svg onclick="esconderMenuLateral()" class="menu-lateral__nav__x feather feather-x" fill="none"
+                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <line x1="18" x2="6" y1="6" y2="18" />
+                <line x1="6" x2="18" y1="6" y2="18" />
+            </svg>
             <h2 class="menu-lateral__nav__titulo">Categorias</h2>
             <ul class="menu-lateral__nav__lista menu-lateral__nav__especiais">
                 <li><a href="#">Mais Vendidos</a></li>
@@ -103,7 +111,22 @@
         </nav>
         <div onclick="esconderMenuLateral()" class="menu-lateral__fundo"></div>
     </aside>
-
+    <div class="sobre">
+        <img src="../logos/Luxida Icon.png" alt="" class="imagem_logo">
+        <div class="barra"></div>
+        <h1 class="texto_sobre_luxida_corporation">Olá, somos a Luxida Corporation e vendemos quaisquer tipo de
+            literatura do mundo inteiro, mas vem a seguinte
+            pergunta, de onde surgiu a Luxida Corporation? A Luxida Corporation venho de uma equipe de Developers que
+            gostariam de fazer um site de vendas sendo assim quem é essa equipe e por quem é composta, a equipe é
+            composta por 3 integrantes e nome deles são: Iago Longen, Erik Radtke e Lucas Yares, a Luxida Corporation
+            foi inventada e desenvolvida no ano de 2023 e está em processo de atualização constantemente então aproveite
+            o melhor do site todos os dias!
+        </h1>
+    </div>
+    <img src="../banners/IAGO.png" alt="">
+    <p>"Olá, eu sou Iago fico em feliz em ter ajudado nessa criação desse site na parte de banco de dados, estou me
+        formando no curso Técnico de Desenvolvimento de Sistema junto com meus amigos que ajudaram criar esse site
+        espero que gostem muito dele!"</p>
     <footer class="footer">
         <div class="footer__info-agrupador">
             <div class="footer__info__redes">
@@ -178,4 +201,5 @@
     <script src="../javascript/produtos.js"></script>
     <script src="../javascript/redirecionamento.js"></script>
 </body>
+
 </html>
