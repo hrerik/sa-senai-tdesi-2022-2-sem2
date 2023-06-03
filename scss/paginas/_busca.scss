@@ -84,7 +84,11 @@
         }
 
         &__imagem {
-            flex: 0 0 200px;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 250px;
+            min-width: 200px;
+            object-fit: contain;
         }
 
         &__descricao {
