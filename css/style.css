@@ -28,6 +28,7 @@ html, body {
   color: transparent;
   /* webkit only for graceful degradation to IE */
   background: -webkit-repeating-linear-gradient(-45deg, #71b7e6, #69a6ce, #b98acc, #ee8176, #b98acc, #69a6ce, #9b59b6);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 400%;

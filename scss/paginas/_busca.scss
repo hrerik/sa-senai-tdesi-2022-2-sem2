@@ -1,0 +1,103 @@
+.main__busca {
+    margin: 48px 0 80px;
+    padding: 0 64px;
+
+    position: relative;
+    display: flex;
+    gap: 64px;
+
+    h1 {
+        @include heading-1-negrito;
+    }
+
+    h2 {
+        @include heading-2-negrito;
+    }
+
+    h3 {
+        @include heading-3-negrito;
+    }
+}
+
+.busca__categoria {
+    flex: 0 0 350px;
+    align-self: start;
+
+    nav {
+        padding: 16px 24px;
+
+        background: $cinza90;
+        border-radius: 16px;
+
+        @include sombra-caixa;
+    }
+
+    &__lista {
+        li a {
+            @include heading-4-regular;
+            color: $cinza10;
+
+            &:hover,
+            &:focus-within {
+                @include sombra-texto;
+                text-decoration: underline;
+                color: $verdigris;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.busca {
+    &__resultados {
+        flex-grow: 1;
+
+        h1 {
+            margin-bottom: 32px;
+        }
+
+        &__lista {
+            width: 100%;
+            
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        &__barra {
+            width: 100%;
+            height: 1px;
+
+            background: $cinza25;
+        }
+    }
+
+    &__item {
+        height: 300px;
+        display: flex;
+        gap: 32px;
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: 16px;
+        }
+
+        &__imagem {
+            flex: 0 0 200px;
+        }
+
+        &__descricao {
+            @include paragrafo;
+            font-size: 16px;
+        }
+
+        &__botao {
+            padding: 20px 32px;
+            font-size: 32px;
+
+            align-self: center;
+            justify-self: end;
+        }
+    }
+}

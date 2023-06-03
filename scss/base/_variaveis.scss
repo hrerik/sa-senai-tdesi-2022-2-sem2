@@ -31,6 +31,7 @@ $garamond: "EB Garamond", serif;
 $inter: "Inter", sans-serif;
 
 // Tipografias predefinidas
+
 // Negrito
 @mixin heading-1-negrito {
     font: 600 11.25 * $espaco $garamond;
@@ -44,6 +45,7 @@ $inter: "Inter", sans-serif;
 @mixin heading-4-negrito {
     font: 600 4 * $espaco $garamond;
 }
+
 // Regular
 @mixin heading-1-regular {
     font: 400 11.25 * $espaco $garamond;
@@ -57,6 +59,7 @@ $inter: "Inter", sans-serif;
 @mixin heading-4-regular {
     font: 400 4 * $espaco $garamond;
 }
+
 // Textos
 @mixin paragrafo {
     font: 300 3 * $espaco $inter;
@@ -64,6 +67,7 @@ $inter: "Inter", sans-serif;
 @mixin paragrafo-negrito {
     font: 700 3 * $espaco $inter;
 }
+
 // Destaques (mesma fonte que parágrafos)
 @mixin destaque-1 {
     font: 700 5.625 * $espaco $inter;

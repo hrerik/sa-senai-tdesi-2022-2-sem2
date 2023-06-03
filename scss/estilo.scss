@@ -1,30 +1,39 @@
 //? Guia rápido de SCSS
-
 //* ÍNDEX
 // 1. Criando um arquivo
 // 2. Importando um arquivo
 // 3. Compactando arquivos scss
 // 4. Usando de estilos já criados
 
+
 //* 1. Criando um arquivo
 // Crie um arquivo [.scss] e nele insira os estilos que quiser.
 
-// Se ele servir para customizar um único elemento ponha-o na pasta [base],
-// senão ponha na [componentes]
+// A pasta 'base' é para cores, tipografias, resets, etc.
+// A pasta 'componentes' é auto-explicativa: estilizações que serão usadas
+// em componentes que afetam vários sites.
+// A pasta 'paginas' é toda estilização exclusiva de uma só página HTML.
 
 // Além disso ponha um '_' antes do nome do arquivo para que o compilador
 // não, bem, o compile... O único arquivo que será compilado é o [estilo.scss]
+
 
 //* 2. Importando um arquivo
 // Venha de volta ao [estilo.scss] e use [@import "pasta/nome-arquivo";] --
 // não é necessário por @import dentro dos outros arquivos; ao trazer pro [estilo.scss]
 // ele já pega os outros estilos
 
+
 //* 3. Compilando arquivos
 // Dentro dum terminal (preferência cmd) apenas escreva [gulp]
 
-// Caso não tenha gulp instalado
+// Caso não tenha gulp instalado, abra um terminal (cmd) e digite:
 
+// npm install gulp gulp-sass sass --save-dev
+// npm install gulp gulp-sass sass -g
+
+// Depois, num terminal onde a pasta do projeto está selecionada, digite [gulp] e o
+// scss já será compilado.
 
 @import "base/variaveis";
 @import "base/reset";
@@ -36,3 +45,5 @@
 @import "componentes/produto";
 @import "componentes/categoria";
 @import "componentes/footer";
+
+@import "paginas/busca";

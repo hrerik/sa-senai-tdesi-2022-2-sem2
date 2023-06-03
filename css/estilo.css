@@ -49,12 +49,10 @@ a {
 
 ::-webkit-scrollbar-track {
   background: #bfbfbf;
-  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #808080;
-  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -155,7 +153,7 @@ a {
 
 .menu-lateral {
   display: none;
-  width: 35%;
+  width: 35vw;
   height: 100vh;
   padding: 16px 24px;
   background: #ffffff;
@@ -163,10 +161,10 @@ a {
   z-index: 2;
   top: 0;
   left: 0;
-  overflow: hidden auto;
+  overflow: hidden scroll;
 }
 .menu-lateral__fundo {
-  width: 65vw;
+  width: calc(65vw - 9px);
   height: 100vh;
   background: #1a1a1a;
   opacity: 0.75;
@@ -212,7 +210,6 @@ a {
 
 .single-item {
   width: 100%;
-  height: 20%;
 }
 
 .single-item div {
@@ -474,4 +471,84 @@ a {
 }
 .footer__info__links__link:hover {
   text-decoration: underline;
+}
+
+.main__busca {
+  margin: 48px 0 80px;
+  padding: 0 64px;
+  position: relative;
+  display: flex;
+  gap: 64px;
+}
+.main__busca h1 {
+  font: 600 45px "EB Garamond", serif;
+}
+.main__busca h2 {
+  font: 600 32px "EB Garamond", serif;
+}
+.main__busca h3 {
+  font: 600 22.5px "EB Garamond", serif;
+}
+
+.busca__categoria {
+  flex: 0 0 350px;
+  align-self: start;
+}
+.busca__categoria nav {
+  padding: 16px 24px;
+  background: #e6e6e6;
+  border-radius: 16px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.busca__categoria__lista li a {
+  font: 400 16px "EB Garamond", serif;
+  color: #1a1a1a;
+}
+.busca__categoria__lista li a:hover, .busca__categoria__lista li a:focus-within {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  text-decoration: underline;
+  color: #45c4b0;
+  font-weight: 700;
+}
+
+.busca__resultados {
+  flex-grow: 1;
+}
+.busca__resultados h1 {
+  margin-bottom: 32px;
+}
+.busca__resultados__lista {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.busca__resultados__barra {
+  width: 100%;
+  height: 1px;
+  background: #404040;
+}
+.busca__item {
+  height: 300px;
+  display: flex;
+  gap: 32px;
+}
+.busca__item__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 16px;
+}
+.busca__item__imagem {
+  flex: 0 0 200px;
+}
+.busca__item__descricao {
+  font: 300 12px "Inter", sans-serif;
+  font-size: 16px;
+}
+.busca__item__botao {
+  padding: 20px 32px;
+  font-size: 32px;
+  align-self: center;
+  justify-self: end;
 }

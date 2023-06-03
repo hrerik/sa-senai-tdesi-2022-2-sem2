@@ -117,7 +117,7 @@
 .menu-lateral {
   display: none;
 
-  width: 35%;
+  width: 35vw;
   height: 100vh;
 
   padding: 4 * $espaco 6 * $espaco;
@@ -131,10 +131,10 @@
   top: 0;
   left: 0;
 
-  overflow: hidden auto;
+  overflow: hidden scroll;
 
   &__fundo {
-    width:  65vw;
+    width:  calc(65vw - 9px);
     height: 100vh;
 
     background: $cinza10;

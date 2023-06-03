@@ -11,5 +11,5 @@ function cadastrar() {
 }
 
 function url(idDiv) {
-    window.location.href = 'Produtos.html?id=' + idDiv; //PÁGINA DO PRODUTO
+    window.location.href = 'produto.html?id=' + idDiv; //PÁGINA DO PRODUTO
 }
