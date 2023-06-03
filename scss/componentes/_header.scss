@@ -1,3 +1,16 @@
+@mixin estiloIconeX {
+  width: 8 * $espaco;
+  height: 8 * $espaco;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 //* HEADER
 
 .header-principal {
@@ -124,14 +137,12 @@
 
   background: $branco;
 
-  // display: none;
-
   position: fixed;
   z-index: 2;
   top: 0;
   left: 0;
 
-  overflow: hidden scroll;
+  overflow: hidden auto;
 
   &__fundo {
     width:  calc(65vw - 9px);
@@ -176,16 +187,47 @@
     }
 
     &__x {
-      width: 8 * $espaco;
-      height: 8 * $espaco;
-
-      position: absolute;
-      top: 0;
-      right: 0;
-
-      &:hover {
-        cursor: pointer;
-      }
+      @include estiloIconeX;
     }
+  }
+}
+
+.menu-carrinho {
+  display: none;
+
+  width: 35vw;
+  height: 100vh;
+
+  padding: 4 * $espaco 6 * $espaco;
+
+  background: $branco;
+
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+
+  overflow: hidden auto;
+
+  &__x {
+    @include estiloIconeX;
+  }
+
+  &__titulo {
+    @include heading-1-negrito;
+  } 
+}
+
+.carrinho__item {
+  background: $cinza90;
+  
+  padding: 16px;
+  
+  display: flex;
+  gap: 16px;
+  
+  &__imagem {
+    object-fit: contain;
+    max-width: 180px;
   }
 }

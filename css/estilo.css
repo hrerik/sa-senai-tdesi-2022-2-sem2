@@ -161,7 +161,7 @@ a {
   z-index: 2;
   top: 0;
   left: 0;
-  overflow: hidden scroll;
+  overflow: hidden auto;
 }
 .menu-lateral__fundo {
   width: calc(65vw - 9px);
@@ -206,6 +206,43 @@ a {
 }
 .menu-lateral__nav__x:hover {
   cursor: pointer;
+}
+
+.menu-carrinho {
+  display: none;
+  width: 35vw;
+  height: 100vh;
+  padding: 16px 24px;
+  background: #ffffff;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  overflow: hidden auto;
+}
+.menu-carrinho__x {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.menu-carrinho__x:hover {
+  cursor: pointer;
+}
+.menu-carrinho__titulo {
+  font: 600 45px "EB Garamond", serif;
+}
+
+.carrinho__item {
+  background: #e6e6e6;
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+}
+.carrinho__item__imagem {
+  object-fit: contain;
+  max-width: 180px;
 }
 
 .single-item {
