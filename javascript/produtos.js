@@ -1,3 +1,4 @@
+const botaoCompra = document.getElementById("precoP");
 
 function obterIDProduto() {
     const urlParams = new URLSearchParams(window.location.search);

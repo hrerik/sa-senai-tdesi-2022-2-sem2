@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Inter:wght@300;700&display=swap";
 * {
   box-sizing: border-box;
@@ -137,7 +138,10 @@ a {
 }
 
 .area-carrinho {
-  display: flex;
+  position: relative;
+}
+.area-carrinho:hover {
+  cursor: pointer;
 }
 
 .botao-carrinho {
@@ -146,6 +150,32 @@ a {
 }
 .botao-carrinho:hover {
   cursor: pointer;
+}
+
+.itens-carrinho {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  position: absolute;
+  bottom: -2px;
+  right: -8px;
+}
+.itens-carrinho__svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#carrinho-quantidade {
+  font: 700 12px "Inter", sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  color: #012030;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 1px;
+  z-index: 1;
 }
 
 .fix-margin {
@@ -256,11 +286,18 @@ a {
 }
 .menu-carrinho__titulo {
   font: 600 45px "EB Garamond", serif;
+  margin-bottom: 24px;
+}
+.menu-carrinho__exibicao {
+  display: flex;
+  flex-direction: column;
 }
 
 .carrinho__item {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   padding: 16px;
   margin-bottom: 32px;
+  border-radius: 8px;
   background: #e6e6e6;
   display: flex;
   gap: 16px;
@@ -268,6 +305,25 @@ a {
 .carrinho__item__imagem {
   object-fit: contain;
   max-width: 180px;
+}
+
+#botao-carrinho-compra {
+  margin-top: 24px;
+  padding: 24px 32px;
+  font-size: 24px;
+  align-self: center;
+}
+
+.carrinho-vazio__titulo {
+  font: 600 45px "EB Garamond", serif;
+  color: #808080;
+  text-align: center;
+}
+.carrinho-vazio__mensagem {
+  font: 300 12px "Inter", sans-serif;
+  color: #808080;
+  font-size: 16px;
+  text-align: center;
 }
 
 #menu-fundo {
@@ -629,4 +685,78 @@ a {
   font-size: 32px;
   align-self: center;
   justify-self: end;
+}
+
+.container-produto {
+  height: 600px;
+  padding: 0 64px;
+  margin: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imagem-produto {
+  width: 400px;
+  height: 500px;
+  padding: 0;
+  margin-left: 60px;
+  display: block;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.descricao-produto {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+#titleP {
+  font: 600 45px "EB Garamond", serif;
+  text-align: center;
+}
+
+#autorP {
+  font: 600 32px "EB Garamond", serif;
+}
+
+.rating {
+  width: 100%;
+  height: 36px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  color: #ddd;
+  float: right;
+  cursor: pointer;
+}
+
+.rating label:before {
+  content: "★";
+  font-size: 36px;
+}
+
+.rating input:checked ~ label {
+  color: #ffca08;
+}
+
+#precoP {
+  width: 300px;
+  height: 50px;
+}
+
+#descricaoP {
+  font: 300 12px "Inter", sans-serif;
+  font-size: 16px;
+  text-align: justify;
 }

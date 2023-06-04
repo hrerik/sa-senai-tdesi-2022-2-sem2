@@ -108,7 +108,11 @@
   }
 }
 .area-carrinho {
-  display: flex;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .botao-carrinho {
@@ -117,6 +121,35 @@
   &:hover {
     cursor: pointer;
   }
+}
+
+.itens-carrinho {
+  width: 18px;
+  height: 18px;
+
+  display: inline-block;
+  position: absolute;
+  bottom: -2px;
+  right: -8px;
+
+  &__svg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+#carrinho-quantidade {
+  @include paragrafo-negrito;
+  @include sombra-texto;
+  text-align: center;
+  color: $maastricht-blue;
+
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 1px;
+  z-index: 1;
 }
 
 .fix-margin {
@@ -241,13 +274,23 @@
 
   &__titulo {
     @include heading-1-negrito;
+    margin-bottom: 24px;
+  }
+
+  &__exibicao {
+    display: flex;
+    flex-direction: column;
+    // gap: 24px;
   }
 }
 
 .carrinho__item {
+  @include sombra-caixa;
+
   padding: 16px;
   margin-bottom: 32px;
 
+  border-radius: 8px;
   background: $cinza90;
 
   display: flex;
@@ -256,6 +299,28 @@
   &__imagem {
     object-fit: contain;
     max-width: 180px;
+  }
+}
+
+#botao-carrinho-compra {
+  margin-top: 24px;
+  padding: 6 * $espaco 8 * $espaco;
+  font-size: 24px;
+
+  align-self: center;
+}
+
+.carrinho-vazio {
+  &__titulo {
+    @include heading-1-negrito;
+    color: $cinza50;
+    text-align: center;
+  }
+  &__mensagem {
+    @include paragrafo;
+    color: $cinza50;
+    font-size: 16px;
+    text-align: center;
   }
 }
 
