@@ -20,23 +20,26 @@
     <link rel="stylesheet" href="../css/produto-estilo.css">
     <script defer src="../javascript/produtos.js"></script>
     <script  defer src="../javascript/redirecionamento.js"></script>
+    <script defer src="../javascript/menu-lateral.js"></script>
+    <script defer src="../javascript/busca.js"></script>
     <title>Produtos</title>
 </head>
 
 <body>
     <header>
         <section class="header-principal">
-            <svg class="botao-sidebar" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="botao-sidebar" onclick="exibirMenuLateral()" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
                 <path d="M19,8H5A1,1,0,0,1,5,6H19a1,1,0,0,1,0,2Z" fill="#13678a" />
                 <path d="M19,13H5a1,1,0,0,1,0-2H19a1,1,0,0,1,0,2Z" fill="#13678a" />
                 <path d="M19,18H5a1,1,0,0,1,0-2H19a1,1,0,0,1,0,2Z" fill="#13678a" />
             </svg>
             <img class="logomarca" src="../logos/luxida-logo.png" alt="Luxida" onclick="home()">
             <div class="aba-pesquisa">
-                <input class="aba-pesquisa__input" placeholder="Pesquise por livros, autores ou palavras-chaves"
+                <input class="aba-pesquisa__input" id="busca" placeholder="Pesquise por livros, autores ou palavras-chaves"
                     type="text">
                 <svg class="aba-pesquisa__lupa" height="48" viewBox="0 0 48 48" width="48"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="http://www.w3.org/2000/svg" onclick="busca()">
                     <path fill="#13678a"
                         d="M31 28h-1.59l-.55-.55c1.96-2.27 3.14-5.22 3.14-8.45 0-7.18-5.82-13-13-13s-13 5.82-13 13 5.82 13 13 13c3.23 0 6.18-1.18 8.45-3.13l.55.55v1.58l10 9.98 2.98-2.98-9.98-10zm-12 0c-4.97 0-9-4.03-9-9s4.03-9 9-9 9 4.03 9 9-4.03 9-9 9z" />
                     <path d="M0 0h48v48h-48z" fill="none" />
@@ -48,8 +51,91 @@
             </div>
         </section>
         <div class="fix-margin"></div>
-
+        <section class="subheader">
+            <nav class="subheader__nav">
+                <a class="subheader__nav__link" href="#">Lançamentos</a>
+                <div class="subheader__nav__barra"></div>
+                <a class="subheader__nav__link" href="#">Mais Vendidos</a>
+                <div class="subheader__nav__barra"></div>
+                <a class="subheader__nav__link" href="#">Ficção</a>
+                <div class="subheader__nav__barra"></div>
+                <a class="subheader__nav__link" href="#">Não-ficção</a>
+                <div class="subheader__nav__barra"></div>
+                <a class="subheader__nav__link" href="#">Infantil</a>
+                <div class="subheader__nav__barra"></div>
+                <a class="subheader__nav__link" href="#">Ofertas</a>
+            </nav>
+        </section>
     </header>
+
+    <aside class="menu-lateral" id="menu-lateral">
+        <nav class="menu-lateral__nav">
+            <svg onclick="esconderMenuLateral()" class="menu-lateral__nav__x feather feather-x" fill="none"
+                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <line x1="18" x2="6" y1="6" y2="18" />
+                <line x1="6" x2="18" y1="6" y2="18" />
+            </svg>
+            <h2 class="menu-lateral__nav__titulo">Categorias</h2>
+            <ul class="menu-lateral__nav__lista menu-lateral__nav__especiais">
+                <li><a href="#">Mais Vendidos</a></li>
+                <li><a href="#">Lançamentos</a></li>
+                <li><a href="#">Ofertas</a></li>
+            </ul>
+
+            <h3 class="menu-lateral__nav__subtitulo">Gêneros de Ficção</h3>
+            <ul class="menu-lateral__nav__lista">
+                <li><a href="#">Fantasia</a></li>
+                <li><a href="#">Ficção Científica</a></li>
+                <li><a href="#">Ficção Policial</a></li>
+                <li><a href="#">Ficção Histórica</a></li>
+                <li><a href="#">Novela</a></li>
+                <li><a href="#">Distopia</a></li>
+                <li><a href="#">Ação e Aventura</a></li>
+                <li><a href="#">Horror</a></li>
+                <li><a href="#">Thriller e Suspense</a></li>
+                <li><a href="#">Romance</a></li>
+                <li><a href="#">Infantil</a></li>
+                <li><a href="#">Young Adult (Adulto Jovem)</a></li>
+                <li><a href="#">Clássicos</a></li>
+            </ul>
+
+            <h3 class="menu-lateral__nav__subtitulo">Gêneros de Não-ficção</h3>
+            <ul class="menu-lateral__nav__lista">
+                <li><a href="#">Autobiografia</a></li>
+                <li><a href="#">Biografia</a></li>
+                <li><a href="#">Artes</a></li>
+                <li><a href="#">História</a></li>
+                <li><a href="#">Autoajuda</a></li>
+                <li><a href="#">Humor</a></li>
+                <li><a href="#">Ensaios</a></li>
+                <li><a href="#">Religião e Espiritualidade</a></li>
+            </ul>
+
+            <h2 class="menu-lateral__nav__titulo">Extras</h2>
+            <ul class="menu-lateral__nav__lista">
+                <li><a href="sobre.html">Sobre nós</a></li>
+                <li><a href="#">FAQ (Perguntas Frequentes)</a></li>
+                <li><a href="#">Central de Ajuda</a></li>
+            </ul>
+        </nav>
+        <div onclick="esconderMenuLateral()" class="menu-lateral__fundo"></div>
+    </aside>
+
+    <aside class="menu-carrinho">
+        <svg onclick="esconderMenuLateral()" class="menu-carrinho__x feather feather-x" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <line x1="18" x2="6" y1="6" y2="18" /> <line x1="6" x2="18" y1="6" y2="18" /></svg>
+        <h2 class="menu-carrinho__titulo">Carrinho de Compras</h2>
+        <section class="menu-carrinho__lista">
+            <div class="carrinho__item">
+                <img src="../Livros/HTMLeCSS.jpeg" alt="putz" class="carrinho__item__imagem">
+                <div class="carrinho__item__info">
+                    <h3 class="carrinho__item__titulo">[Título]</h3>
+                    <p class="carrinho__item__preco">[Preço]</p>
+                </div>
+            </div>
+        </section>
+    </aside>
+
 
     <div class="container-produto">
         <div class="imagem-produto"></div>
@@ -59,7 +145,7 @@
         <div class="descricao-produto">
             <h1 id="titleP">Título do livro</h1>
             <h3 id="autorP">autor do livro</h3>
-            <h3 id="vendedor">Vendedor: Luceik</h3>
+            <h3 id="vendedor">Vendedor: Luxida</h3>
             <h3 class="paginas">Paginas: 200</h3>
             <div class="rating">
 
