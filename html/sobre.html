@@ -11,7 +11,7 @@
     <!--? Acessar arquivo estilo.scss para instruções -->
     <link rel="stylesheet" href="..\css\estilo.css">
     <link rel="stylesheet" href="../css/estilo_sobre.css">
-
+    <script src="../javascript/busca.js"></script>
     <title>Sobre nós — Livraria Luxida</title>
 </head>
 
@@ -26,10 +26,10 @@
             </svg>
             <img class="logomarca" src="../logos/luxida-logo.png" alt="Luxida" onclick="home()">
             <div class="aba-pesquisa">
-                <input class="aba-pesquisa__input" placeholder="Pesquise por livros, autores ou palavras-chaves"
+                <input class="aba-pesquisa__input" id="busca" placeholder="Pesquise por livros, autores ou palavras-chaves"
                     type="text">
                 <svg class="aba-pesquisa__lupa" height="48" viewBox="0 0 48 48" width="48"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="http://www.w3.org/2000/svg" onclick="busca()">
                     <path fill="#13678a"
                         d="M31 28h-1.59l-.55-.55c1.96-2.27 3.14-5.22 3.14-8.45 0-7.18-5.82-13-13-13s-13 5.82-13 13 5.82 13 13 13c3.23 0 6.18-1.18 8.45-3.13l.55.55v1.58l10 9.98 2.98-2.98-9.98-10zm-12 0c-4.97 0-9-4.03-9-9s4.03-9 9-9 9 4.03 9 9-4.03 9-9 9z" />
                     <path d="M0 0h48v48h-48z" fill="none" />
@@ -123,10 +123,14 @@
             o melhor do site todos os dias!
         </h1>
     </div>
+<img src="../banners/LUCAS.jpeg">
+    <p> "Hello, eu sou o Lucas e venho agradecer a Luxida por realizar o meu sonho de vida, agradeço pela oportunidade que me deram para ajudá-los em sua criação, desenvolvendo a corporação e retendo conhecimento. Tudo isso para que vocês possam desfrutar da melhor livraria do mundo que tem os melhores preços"</p>
     <img src="../banners/IAGO.png" alt="">
     <p>"Olá, eu sou Iago fico em feliz em ter ajudado nessa criação desse site na parte de banco de dados, estou me
         formando no curso Técnico de Desenvolvimento de Sistema junto com meus amigos que ajudaram criar esse site
         espero que gostem muito dele!"</p>
+
+
     <footer class="footer">
         <div class="footer__info-agrupador">
             <div class="footer__info__redes">
