@@ -3,8 +3,10 @@
   height: 8 * $espaco;
 
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 12px;
+  right: 20px;
+
+  z-index: 3;
 
   &:hover {
     cursor: pointer;
@@ -39,19 +41,6 @@
   }
 }
 
-.area-login {
-  display: inline-flex;
-  gap: 8 * $espaco;
-
-  &__entrar {
-    padding: 2 * $espaco 4 * $espaco;
-  }
-
-  &__cadastrar {
-    padding: 2 * $espaco 4 * $espaco;
-  }
-}
-
 .logomarca {
   height: 9 * $espaco;
   &:hover {
@@ -60,20 +49,23 @@
 }
 
 .aba-pesquisa {
-  width: 80 * $espaco;
+  width: 100 * $espaco;
   height: 7 * $espaco;
+
+  padding: 0 8px;
 
   border: $blue-saphire solid 2px;
   border-radius: 3.5 * $espaco;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  gap: 8px;
 
   &__input {
     @include paragrafo();
-    width: 68 * $espaco;
-    height: 100%;
+    flex: 1;
+    height: 95%;
 
     background: none;
     border: none;
@@ -82,6 +74,48 @@
   &__lupa {
     width: 5 * $espaco;
     height: 5 * $espaco;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.area-login {
+  width: 240px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__entrar {
+    padding: 2 * $espaco 4 * $espaco;
+  }
+
+  &__cadastrar {
+    padding: 2 * $espaco 4 * $espaco;
+  }
+
+  &__perfil {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    &__foto {
+      width: 36px;
+      height: 36px;
+      border-radius: 100px;
+    }
+  }
+}
+.area-carrinho {
+  display: flex;
+}
+
+.botao-carrinho {
+  width: 36px;
+  height: 36px;
+  &:hover {
+    cursor: pointer;
   }
 }
 
@@ -144,18 +178,6 @@
 
   overflow: hidden auto;
 
-  &__fundo {
-    width:  calc(65vw - 9px);
-    height: 100vh;
-
-    background: $cinza10;
-    opacity: 0.75;
-
-    position: fixed;
-    top: 0;
-    right: 0;
-  }
-
   &__nav {
     position: relative;
 
@@ -192,6 +214,8 @@
   }
 }
 
+//* MENU CARRINHO
+
 .menu-carrinho {
   display: none;
 
@@ -211,23 +235,43 @@
 
   &__x {
     @include estiloIconeX;
+    top: 12px;
+    right: 20px;
   }
 
   &__titulo {
     @include heading-1-negrito;
-  } 
+  }
 }
 
 .carrinho__item {
-  background: $cinza90;
-  
   padding: 16px;
-  
+  margin-bottom: 32px;
+
+  background: $cinza90;
+
   display: flex;
   gap: 16px;
-  
+
   &__imagem {
     object-fit: contain;
     max-width: 180px;
   }
+}
+
+//* FUNDO DOS MENUS LATERAIS
+
+#menu-fundo {
+  display: none;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: $cinza10;
+  opacity: 0.75;
+
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: 0;
 }

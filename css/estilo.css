@@ -80,17 +80,6 @@ a {
   cursor: pointer;
 }
 
-.area-login {
-  display: inline-flex;
-  gap: 32px;
-}
-.area-login__entrar {
-  padding: 8px 16px;
-}
-.area-login__cadastrar {
-  padding: 8px 16px;
-}
-
 .logomarca {
   height: 36px;
 }
@@ -99,24 +88,64 @@ a {
 }
 
 .aba-pesquisa {
-  width: 320px;
+  width: 400px;
   height: 28px;
+  padding: 0 8px;
   border: #13678a solid 2px;
   border-radius: 14px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  gap: 8px;
 }
 .aba-pesquisa__input {
   font: 300 12px "Inter", sans-serif;
-  width: 272px;
-  height: 100%;
+  flex: 1;
+  height: 95%;
   background: none;
   border: none;
 }
 .aba-pesquisa__lupa {
   width: 20px;
   height: 20px;
+}
+.aba-pesquisa__lupa:hover {
+  cursor: pointer;
+}
+
+.area-login {
+  width: 240px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.area-login__entrar {
+  padding: 8px 16px;
+}
+.area-login__cadastrar {
+  padding: 8px 16px;
+}
+.area-login__perfil {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.area-login__perfil__foto {
+  width: 36px;
+  height: 36px;
+  border-radius: 100px;
+}
+
+.area-carrinho {
+  display: flex;
+}
+
+.botao-carrinho {
+  width: 36px;
+  height: 36px;
+}
+.botao-carrinho:hover {
+  cursor: pointer;
 }
 
 .fix-margin {
@@ -163,15 +192,6 @@ a {
   left: 0;
   overflow: hidden auto;
 }
-.menu-lateral__fundo {
-  width: calc(65vw - 9px);
-  height: 100vh;
-  background: #1a1a1a;
-  opacity: 0.75;
-  position: fixed;
-  top: 0;
-  right: 0;
-}
 .menu-lateral__nav {
   position: relative;
 }
@@ -201,8 +221,9 @@ a {
   width: 32px;
   height: 32px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 12px;
+  right: 20px;
+  z-index: 3;
 }
 .menu-lateral__nav__x:hover {
   cursor: pointer;
@@ -224,8 +245,11 @@ a {
   width: 32px;
   height: 32px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 12px;
+  right: 20px;
+  z-index: 3;
+  top: 12px;
+  right: 20px;
 }
 .menu-carrinho__x:hover {
   cursor: pointer;
@@ -235,14 +259,27 @@ a {
 }
 
 .carrinho__item {
-  background: #e6e6e6;
   padding: 16px;
+  margin-bottom: 32px;
+  background: #e6e6e6;
   display: flex;
   gap: 16px;
 }
 .carrinho__item__imagem {
   object-fit: contain;
   max-width: 180px;
+}
+
+#menu-fundo {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: #1a1a1a;
+  opacity: 0.75;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 .single-item {
