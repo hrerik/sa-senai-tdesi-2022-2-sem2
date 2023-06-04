@@ -31,10 +31,10 @@
             </svg>
             <img class="logomarca" src="../logos/luxida-logo.png" alt="Luxida" onclick="home()">
             <div class="aba-pesquisa">
-                <input class="aba-pesquisa__input" placeholder="Pesquise por livros, autores ou palavras-chaves"
+                <input class="aba-pesquisa__input" id="busca" placeholder="Pesquise por livros, autores ou palavras-chaves"
                     type="text">
                 <svg class="aba-pesquisa__lupa" height="48" viewBox="0 0 48 48" width="48"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="http://www.w3.org/2000/svg" onclick="busca()">
                     <path fill="#13678a"
                         d="M31 28h-1.59l-.55-.55c1.96-2.27 3.14-5.22 3.14-8.45 0-7.18-5.82-13-13-13s-13 5.82-13 13 5.82 13 13 13c3.23 0 6.18-1.18 8.45-3.13l.55.55v1.58l10 9.98 2.98-2.98-9.98-10zm-12 0c-4.97 0-9-4.03-9-9s4.03-9 9-9 9 4.03 9 9-4.03 9-9 9z" />
                     <path d="M0 0h48v48h-48z" fill="none" />
@@ -149,7 +149,7 @@
             <div class="secao-produto__slider">
                 <div class="card-produto" id="001" onclick="url('001')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0001"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -158,7 +158,7 @@
                 </div>
                 <div class="card-produto" id="002" onclick="url('002')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0002"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -167,7 +167,7 @@
                 </div>
                 <div class="card-produto" id="003" onclick="url('003')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0003"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -176,7 +176,7 @@
                 </div>
                 <div class="card-produto" id="004" onclick="url('004')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0004"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -185,7 +185,7 @@
                 </div>
                 <div class="card-produto" id="005" onclick="url('005')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0005"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -204,7 +204,7 @@
             <div class="secao-produto__slider">
                 <div class="card-produto" id="006" onclick="url('006')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0006"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -213,7 +213,7 @@
                 </div>
                 <div class="card-produto" id="007" onclick="url('007')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0007"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -222,7 +222,7 @@
                 </div>
                 <div class="card-produto" id="008" onclick="url('008')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0008"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -231,7 +231,7 @@
                 </div>
                 <div class="card-produto" id="009" onclick="url('009')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0009"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -240,7 +240,7 @@
                 </div>
                 <div class="card-produto" id="010" onclick="url('010')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0010"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -285,7 +285,7 @@
             <div class="secao-produto__slider">
                 <div class="card-produto" id="011" onclick="url('011')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0011"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -294,7 +294,7 @@
                 </div>
                 <div class="card-produto" id="012" onclick="url('012')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0012"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -303,7 +303,7 @@
                 </div>
                 <div class="card-produto" id="013" onclick="url('013')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0013"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -312,7 +312,7 @@
                 </div>
                 <div class="card-produto" id="014" onclick="url('014')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0014"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -321,7 +321,7 @@
                 </div>
                 <div class="card-produto" id="015" onclick="url('015')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0015"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -340,7 +340,7 @@
             <div class="secao-produto__slider">
                 <div class="card-produto" id="016" onclick="url('016')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0016"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -349,7 +349,7 @@
                 </div>
                 <div class="card-produto" id="017" onclick="url('017')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0017"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -358,7 +358,7 @@
                 </div>
                 <div class="card-produto" id="018" onclick="url('018')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0018"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -367,7 +367,7 @@
                 </div>
                 <div class="card-produto" id="019" onclick="url('019')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0019"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -376,7 +376,7 @@
                 </div>
                 <div class="card-produto" id="020" onclick="url('020')">
                     <div class="card-produto__agrupador">
-                        <div class="card-produto__frente"></div>
+                        <div class="card-produto__frente" id="0020"></div>
                         <div class="card-produto__tras">
                             <h3 class="card-produto__titulo">HTML e CSS</h3>
                             <p class="card-produto__preco">R$ 69,90</p>
@@ -457,7 +457,9 @@
 
     <!-- Scripts -->
     <!-- Nativos -->
-    <script src="../javascript/hero-slider.js"></script>
+    <script src="../javascript/imagens-produtos.js"></script>
+    <script src="../javascript/busca.js"></script>
+    <script defer src="../javascript/hero-slider.js"></script>
     <script src="../javascript/menu-lateral.js"></script>
     <script src="../javascript/produtos.js"></script>
     <script src="../javascript/redirecionamento.js"></script>
