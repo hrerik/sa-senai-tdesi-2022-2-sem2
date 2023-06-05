@@ -13,3 +13,7 @@ function cadastrar() {
 function url(idDiv) {
     window.location.href = 'produto.html?id=' + idDiv; //PÁGINA DO PRODUTO
 }
+
+function insta(){
+    window.open("https://www.instagram.com/luxida_corporation23/")
+}
