@@ -106,6 +106,9 @@ a {
   background: none;
   border: none;
 }
+input{
+  outline: none;
+}
 .aba-pesquisa__lupa {
   width: 20px;
   height: 20px;

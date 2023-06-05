@@ -15,11 +15,10 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
 
-    <title>Produtos — Livraria Luxida</title>
+    <title>Produtos</title>
 </head>
 
 <body>
-    <div onclick="esconderMenuCarrinho();esconderMenuLateral();" id="menu-fundo"></div>
     <div onclick="esconderMenuCarrinho();esconderMenuLateral();" id="menu-fundo"></div>
     <header>
         <section class="header-principal">
@@ -183,6 +182,7 @@
                 </div>
             </div>
             <button id="botao-carrinho-compra" class="botao-primario">Finalizar Compra</button>
+            <button id="botao-primario" onclick="zerarQuantidade()">Limpar</button>
 
             <!--* CARRINHO SEM ITENS -->
             <!-- <h3 class="carrinho-vazio__titulo">Seu carrinho está vazio</h3>
