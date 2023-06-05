@@ -14,3 +14,11 @@ if (valorArmazenado) {
   var numero_car = document.getElementById('carrinho-quantidade');
   numero_car.textContent = valorArmazenado;
 }
+
+function zerarQuantidade() {
+  var numero_car = document.getElementById('carrinho-quantidade');
+  numero_car.textContent = '0';
+
+  // Remover o valor armazenado no localStorage
+  localStorage.removeItem('quantidade');
+}
