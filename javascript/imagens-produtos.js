@@ -26,6 +26,12 @@ const imagens = {
     const imagem = document.getElementById(id);
     imagem.style.backgroundImage = "url('" + imagens[id] + "')";
   }
+
+  fundoinverso = document.querySelectorAll('.card-produto__tras');
+  for (var i = 0; i < fundoinverso.length; i++) {
+    fundoinverso[i].style.background = 'black';
+  }
+  
   
   
   
