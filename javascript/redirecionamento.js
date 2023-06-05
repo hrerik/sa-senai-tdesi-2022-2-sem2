@@ -7,7 +7,7 @@ function login() {
 }
 
 function cadastrar() {
-        window.location.href = "LINKDOSITE.NGROK" //TE DIRECIONA PARA A PÁGINA DE CADASTRO QUANDO CLICADA NO BOTÃO 
+        window.location.href = "http://localhost/SA/Cadastro.php" //TE DIRECIONA PARA A PÁGINA DE CADASTRO QUANDO CLICADA NO BOTÃO 
 }
 
 function url(idDiv) {

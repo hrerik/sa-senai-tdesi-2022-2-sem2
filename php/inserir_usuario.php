@@ -13,5 +13,5 @@ $result = mysqli_query($conexao, "INSERT INTO usuario (nome_usuario, senha_usuar
 }
 */
 
-header("Location:cadastrar.php");
+header("Location:google.com.br");
 ?>

@@ -12,9 +12,4 @@ $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbname);
 } else {
     echo "Conexão efetuada com sucesso";
 }*/
-
-if(isset($_POST['submit'])){
-    print_r($_POST['nome']);
-    print_r($_POST['senha']);
-    }
 ?>
