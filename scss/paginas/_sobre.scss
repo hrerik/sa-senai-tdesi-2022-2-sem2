@@ -1,0 +1,78 @@
+.sobre {
+  &-main {
+    padding: 0 64px;
+  }
+
+  &__luxida {
+    margin: 64px 0 128px;
+
+    display: flex;
+    align-items: center;
+    gap: 64px;
+
+    &__logo {
+      width: 350px;
+      height: 350px;
+    }
+
+    &__barra {
+      background-color: #13678a;
+      width: 50px;
+      height: 350px;
+      border-radius: 100px;
+    }
+
+    &__texto {
+      @include paragrafo;
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+
+  &__devs {
+    margin-bottom: 64px;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  &__dev {
+    @include sombra-caixa;
+    width: 400px;
+
+    padding: 32px;
+
+    background-image: $degrade-verde-azul-2;
+
+    border-radius: 24px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+
+    &__perfil {
+      @include sombra-caixa;
+      width: 360px;
+      height: 360px;
+      
+      background-color: $maastricht-blue;
+      border: 8px solid $maastricht-blue;
+
+      object-fit: cover;
+      border-radius: 500px;
+    }
+
+    &__comentario {
+      @include paragrafo-negrito;
+      @include sombra-texto;
+      color: $branco;
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+}

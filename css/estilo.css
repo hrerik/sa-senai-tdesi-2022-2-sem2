@@ -106,9 +106,6 @@ a {
   background: none;
   border: none;
 }
-input{
-  outline: none;
-}
 .aba-pesquisa__lupa {
   width: 20px;
   height: 20px;
@@ -311,6 +308,13 @@ input{
 }
 
 #botao-carrinho-compra {
+  margin-top: 24px;
+  padding: 24px 32px;
+  font-size: 24px;
+  align-self: center;
+}
+
+.botao__carrinho__zerar {
   margin-top: 24px;
   padding: 24px 32px;
   font-size: 24px;
@@ -764,27 +768,61 @@ input{
   text-align: justify;
 }
 
-.sobre {
+.sobre-main {
+  padding: 0 64px;
+}
+.sobre__luxida {
+  margin: 64px 0 128px;
   display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  align-items: center;
+  gap: 64px;
 }
-
-.barra {
-  background-color: #13678a;
-  width: 100px;
-  height: 350px;
-  border-radius: 10px;
-}
-
-.imagem_logo {
+.sobre__luxida__logo {
   width: 350px;
   height: 350px;
 }
-
-.texto_sobre_luxida_corporation {
-  font-size: larger;
-  font-family: "inter", sans-serif;
+.sobre__luxida__barra {
+  background-color: #13678a;
+  width: 50px;
+  height: 350px;
+  border-radius: 100px;
+}
+.sobre__luxida__texto {
+  font: 300 12px "Inter", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+}
+.sobre__devs {
+  margin-bottom: 64px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+.sobre__dev {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  padding: 32px;
+  background-image: linear-gradient(135deg, #9aeba3, #13678a);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+.sobre__dev__perfil {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  width: 360px;
+  height: 360px;
+  background-color: #012030;
+  border: 8px solid #012030;
+  object-fit: cover;
+  border-radius: 500px;
+}
+.sobre__dev__comentario {
+  font: 700 12px "Inter", sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
 }

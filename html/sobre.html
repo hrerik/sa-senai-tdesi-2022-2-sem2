@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <div onclick="esconderMenuCarrinho();esconderMenuLateral();" id="menu-fundo"></div>
     <header>
         <section class="header-principal">
             <svg class="botao-sidebar" onclick="exibirMenuLateral()" viewBox="0 0 24 24"
@@ -24,8 +25,8 @@
             </svg>
             <img class="logomarca" src="../logos/luxida-logo.png" alt="Luxida" onclick="home()">
             <div class="aba-pesquisa">
-                <input class="aba-pesquisa__input" id="busca" placeholder="Pesquise por livros, autores ou palavras-chaves"
-                    type="text">
+                <input class="aba-pesquisa__input" id="busca"
+                    placeholder="Pesquise por livros, autores ou palavras-chaves" type="text">
                 <svg class="aba-pesquisa__lupa" height="48" viewBox="0 0 48 48" width="48"
                     xmlns="http://www.w3.org/2000/svg" onclick="busca()">
                     <path fill="#13678a"
@@ -34,8 +35,34 @@
                 </svg>
             </div>
             <div class="area-login">
-                <button class="botao-secundario area-login__entrar" onclick="login()">Login</button>
-                <button class="botao-primario area-login__cadastrar" onclick="cadastrar()">Cadastra-se</button>
+                <!--* ÁREA PERFIL LOGADO -->
+                <div class="area-login__perfil">
+                    <img src="../banners/foto_perfil_placeholder.png" class="area-login__perfil__foto">
+                    <p class="area-login__perfil__ola">Olá, [Perfil]</p>
+                </div>
+                <div class="area-carrinho" onclick="exibirMenuCarrinho();">
+                    <svg class="botao-carrinho" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                        <rect fill="none" height="256" width="256" />
+                        <path d="M184,184H69.8L41.9,30.6A8,8,0,0,0,34.1,24H16" fill="none" stroke="#000"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                        <circle cx="80" cy="204" fill="none" r="20" stroke="#000" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16" />
+                        <circle cx="184" cy="204" fill="none" r="20" stroke="#000" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16" />
+                        <path d="M62.5,144H188.1a15.9,15.9,0,0,0,15.7-13.1L216,64H48" fill="none" stroke="#000"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                    </svg>
+                    <div class="itens-carrinho">
+                        <span id="carrinho-quantidade">0</span>
+                        <svg class="itens-carrinho__svg" width="18px" height="18px">
+                            <circle cx="9px" cy="9px" r="9px" fill="#9aeba3" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!--* ÁREA NÃO LOGADO -->
+                <!-- <button class="botao-secundario area-login__entrar" onclick="login()">Login</button>
+                <button class="botao-primario area-login__cadastrar" onclick="cadastrar()">Cadastra-se</button> -->
             </div>
         </section>
         <div class="fix-margin"></div>
@@ -57,13 +84,13 @@
     </header>
 
     <aside class="menu-lateral" id="menu-lateral">
+        <svg onclick="esconderMenuLateral()" class="menu-lateral__nav__x feather feather-x" fill="none"
+            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <line x1="18" x2="6" y1="6" y2="18" />
+            <line x1="6" x2="18" y1="6" y2="18" />
+        </svg>
         <nav class="menu-lateral__nav">
-            <svg onclick="esconderMenuLateral()" class="menu-lateral__nav__x feather feather-x" fill="none"
-                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <line x1="18" x2="6" y1="6" y2="18" />
-                <line x1="6" x2="18" y1="6" y2="18" />
-            </svg>
             <h2 class="menu-lateral__nav__titulo">Categorias</h2>
             <ul class="menu-lateral__nav__lista menu-lateral__nav__especiais">
                 <li><a href="#">Mais Vendidos</a></li>
@@ -107,27 +134,83 @@
                 <li><a href="#">Central de Ajuda</a></li>
             </ul>
         </nav>
-        <div onclick="esconderMenuLateral()" class="menu-lateral__fundo"></div>
     </aside>
-    <div class="sobre">
-        <img src="../logos/Luxida Icon.png" alt="" class="imagem_logo">
-        <div class="barra"></div>
-        <h1 class="texto_sobre_luxida_corporation">Olá, somos a Luxida Corporation e vendemos quaisquer tipo de
-            literatura do mundo inteiro, mas vem a seguinte
-            pergunta, de onde surgiu a Luxida Corporation? A Luxida Corporation venho de uma equipe de Developers que
-            gostariam de fazer um site de vendas sendo assim quem é essa equipe e por quem é composta, a equipe é
-            composta por 3 integrantes e nome deles são: Iago Longen, Erik Radtke e Lucas Yares, a Luxida Corporation
-            foi inventada e desenvolvida no ano de 2023 e está em processo de atualização constantemente então aproveite
-            o melhor do site todos os dias!
-        </h1>
-    </div>
-<img src="../banners/lucas.png">
-    <p> "Hello, eu sou o Lucas e venho agradecer a Luxida por realizar o meu sonho de vida, agradeço pela oportunidade que me deram para ajudá-los em sua criação, desenvolvendo a corporação e retendo conhecimento. Tudo isso para que vocês possam desfrutar da melhor livraria do mundo que tem os melhores preços"</p>
-    <img src="../banners/IAGO.png" alt="">
-    <p>"Olá, eu sou Iago fico em feliz em ter ajudado nessa criação desse site na parte de banco de dados, estou me
-        formando no curso Técnico de Desenvolvimento de Sistema junto com meus amigos que ajudaram criar esse site
-        espero que gostem muito dele!"</p>
 
+    <aside id="menu-carrinho" class="menu-carrinho">
+        <svg onclick="esconderMenuCarrinho()" class="menu-carrinho__x feather feather-x" fill="none"
+            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <line x1="18" x2="6" y1="6" y2="18" />
+            <line x1="6" x2="18" y1="6" y2="18" />
+        </svg>
+        <h2 class="menu-carrinho__titulo">Carrinho de Compras</h2>
+        <section class="menu-carrinho__exibicao">
+            <!--* SEÇÃO CARRINHO COM ITENS -->
+            <!-- <div class="menu-carrinho__lista">
+                <div class="carrinho__item">
+                    <img src="../Livros/HTMLeCSS.jpeg" alt="putz" class="carrinho__item__imagem">
+                    <div class="carrinho__item__info">
+                        <h3 class="carrinho__item__titulo">[Título]</h3>
+                        <p class="carrinho__item__preco">[Preço]</p>
+                    </div>
+                </div>
+                <div class="carrinho__item">
+                    <img src="../Livros/HTMLeCSS.jpeg" alt="putz" class="carrinho__item__imagem">
+                    <div class="carrinho__item__info">
+                        <h3 class="carrinho__item__titulo">[Título]</h3>
+                        <p class="carrinho__item__preco">[Preço]</p>
+                    </div>
+                </div>
+                <div class="carrinho__item">
+                    <img src="../Livros/HTMLeCSS.jpeg" alt="putz" class="carrinho__item__imagem">
+                    <div class="carrinho__item__info">
+                        <h3 class="carrinho__item__titulo">[Título]</h3>
+                        <p class="carrinho__item__preco">[Preço]</p>
+                    </div>
+                </div>
+                <div class="carrinho__item">
+                    <img src="../Livros/HTMLeCSS.jpeg" alt="putz" class="carrinho__item__imagem">
+                    <div class="carrinho__item__info">
+                        <h3 class="carrinho__item__titulo">[Título]</h3>
+                        <p class="carrinho__item__preco">[Preço]</p>
+                    </div>
+                </div>
+            </div>
+            <button id="botao-carrinho-compra" class="botao-primario">Finalizar Compra</button>
+            <button id="botao-primario" class="botao-primario botao__carrinho__zerar" onclick="zerarQuantidade()">Limpar</button> -->
+
+            <!--* CARRINHO SEM ITENS -->
+            <h3 class="carrinho-vazio__titulo">Seu carrinho está vazio</h3>
+                <p class="carrinho-vazio__mensagem">Que tal dar uma olhadinha em nosso catálogo?</p>
+        </section>
+    </aside>
+    
+    <main class="sobre-main">
+        <section class="sobre__luxida">
+            <img src="../logos/Luxida Icon.png" alt="" class="sobre__luxida__logo">
+            <div class="sobre__luxida__barra"></div>
+            <p class="sobre__luxida__texto">Olá, somos a Luxida Corporation e vendemos quaisquer tipo de
+                literatura do mundo inteiro, mas vem a seguinte pergunta, de onde surgiu a Luxida Corporation? A Luxida
+                Corporation venho de uma equipe de Developers que gostariam de fazer um site de vendas sendo assim quem é
+                essa equipe e por quem é composta, a equipe é composta por 3 integrantes e nome deles são: Iago Longen, Erik
+                Radtke e Lucas Yares, a Luxida Corporation foi inventada e desenvolvida no ano de 2023 e está em processo de
+                atualização constantemente então aproveite o melhor do site todos os dias!</p>
+        </section>
+        <section class="sobre__devs">
+            <div class="sobre__dev">
+                <img class="sobre__dev__perfil" src="../banners/lucas.png">
+                <p class="sobre__dev__comentario"> "Hello, eu sou o Lucas e venho agradecer a Luxida por realizar o meu sonho de vida, agradeço pela oportunidade que me deram para ajudá-los em sua criação, desenvolvendo a corporação e retendo conhecimento. Tudo isso para que vocês possam desfrutar da melhor livraria do mundo que tem os melhores preços"</p>
+            </div>
+            <div class="sobre__dev">
+                <img class="sobre__dev__perfil" src="../banners/IAGO.png" alt="">
+                <p class="sobre__dev__comentario">"Olá, eu sou Iago fico em feliz em ter ajudado nessa criação desse site na parte de banco de dados, estou me formando no curso Técnico de Desenvolvimento de Sistema junto com meus amigos que ajudaram criar esse site espero que gostem muito dele!"</p>
+            </div>
+            <div class="sobre__dev">
+                <img class="sobre__dev__perfil" src="../banners/erik.png" alt="">
+                <p class="sobre__dev__comentario">"Opa! Sou Erik, desenvolvedor do site da Luxida e principal responsável pela estética do site. Palavras não conseguem descrever o entusiasmo que foi contruir este site, e espero que, enquanto estejas aqui, ele também seja do teu agrado!"</p>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="footer__info-agrupador">
@@ -209,7 +292,6 @@
     <!-- Slick -->
     <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
 </body>
 
 </html>
