@@ -15,11 +15,10 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
 
-    <title>Produtos — Livraria Luxida</title>
+    <title>Produtos</title>
 </head>
 
 <body>
-    <div onclick="esconderMenuCarrinho();esconderMenuLateral();" id="menu-fundo"></div>
     <div onclick="esconderMenuCarrinho();esconderMenuLateral();" id="menu-fundo"></div>
     <header>
         <section class="header-principal">
@@ -41,34 +40,6 @@
                 </svg>
             </div>
             <div class="area-login">
-                <!--* ÁREA PERFIL LOGADO -->
-                <div class="area-login__perfil">
-                    <img src="../banners/foto_perfil_placeholder.png" class="area-login__perfil__foto">
-                    <p class="area-login__perfil__ola">Olá, [Perfil]</p>
-                </div>
-                <div class="area-carrinho" onclick="exibirMenuCarrinho();">
-                    <svg class="botao-carrinho" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
-                        <rect fill="none" height="256" width="256" />
-                        <path d="M184,184H69.8L41.9,30.6A8,8,0,0,0,34.1,24H16" fill="none" stroke="#000"
-                            stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                        <circle cx="80" cy="204" fill="none" r="20" stroke="#000" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="16" />
-                        <circle cx="184" cy="204" fill="none" r="20" stroke="#000" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="16" />
-                        <path d="M62.5,144H188.1a15.9,15.9,0,0,0,15.7-13.1L216,64H48" fill="none" stroke="#000"
-                            stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                    </svg>
-                    <div class="itens-carrinho">
-                        <span id="carrinho-quantidade">0</span>
-                        <svg class="itens-carrinho__svg" width="18px" height="18px">
-                            <circle cx="9px" cy="9px" r="9px" fill="#9aeba3" />
-                        </svg>
-                    </div>
-                </div>
-
-                <!--* ÁREA NÃO LOGADO -->
-                <!-- <button class="botao-secundario area-login__entrar" onclick="login()">Login</button>
-                <button class="botao-primario area-login__cadastrar" onclick="cadastrar()">Cadastra-se</button> -->
                 <!--* ÁREA PERFIL LOGADO -->
                 <div class="area-login__perfil">
                     <img src="../banners/foto_perfil_placeholder.png" class="area-login__perfil__foto">
@@ -125,13 +96,6 @@
             <line x1="6" x2="18" y1="6" y2="18" />
         </svg>
         <nav class="menu-lateral__nav">
-        <svg onclick="esconderMenuLateral()" class="menu-lateral__nav__x feather feather-x" fill="none"
-            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <line x1="18" x2="6" y1="6" y2="18" />
-            <line x1="6" x2="18" y1="6" y2="18" />
-        </svg>
-        <nav class="menu-lateral__nav">
             <h2 class="menu-lateral__nav__titulo">Categorias</h2>
             <ul class="menu-lateral__nav__lista menu-lateral__nav__especiais">
                 <li><a href="#">Mais Vendidos</a></li>
@@ -179,8 +143,6 @@
 
     <aside id="menu-carrinho" class="menu-carrinho">
         <svg onclick="esconderMenuCarrinho()" class="menu-carrinho__x feather feather-x" fill="none"
-    <aside id="menu-carrinho" class="menu-carrinho">
-        <svg onclick="esconderMenuCarrinho()" class="menu-carrinho__x feather feather-x" fill="none"
             stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">
             <line x1="18" x2="6" y1="6" y2="18" />
@@ -220,43 +182,7 @@
                 </div>
             </div>
             <button id="botao-carrinho-compra" class="botao-primario">Finalizar Compra</button>
-
-            <!--* CARRINHO SEM ITENS -->
-            <!-- <h3 class="carrinho-vazio__titulo">Seu carrinho está vazio</h3>
-            <p class="carrinho-vazio__mensagem">Que tal dar uma olhadinha em nosso catálogo?</p> -->
-        <section class="menu-carrinho__exibicao">
-            <!--* SEÇÃO CARRINHO COM ITENS -->
-            <div class="menu-carrinho__lista">
-                <div class="carrinho__item">
-                    <img src="../Livros/HTMLeCSS.jpeg" alt="putz" class="carrinho__item__imagem">
-                    <div class="carrinho__item__info">
-                        <h3 class="carrinho__item__titulo">[Título]</h3>
-                        <p class="carrinho__item__preco">[Preço]</p>
-                    </div>
-                </div>
-                <div class="carrinho__item">
-                    <img src="../Livros/HTMLeCSS.jpeg" alt="putz" class="carrinho__item__imagem">
-                    <div class="carrinho__item__info">
-                        <h3 class="carrinho__item__titulo">[Título]</h3>
-                        <p class="carrinho__item__preco">[Preço]</p>
-                    </div>
-                </div>
-                <div class="carrinho__item">
-                    <img src="../Livros/HTMLeCSS.jpeg" alt="putz" class="carrinho__item__imagem">
-                    <div class="carrinho__item__info">
-                        <h3 class="carrinho__item__titulo">[Título]</h3>
-                        <p class="carrinho__item__preco">[Preço]</p>
-                    </div>
-                </div>
-                <div class="carrinho__item">
-                    <img src="../Livros/HTMLeCSS.jpeg" alt="putz" class="carrinho__item__imagem">
-                    <div class="carrinho__item__info">
-                        <h3 class="carrinho__item__titulo">[Título]</h3>
-                        <p class="carrinho__item__preco">[Preço]</p>
-                    </div>
-                </div>
-            </div>
-            <button id="botao-carrinho-compra" class="botao-primario">Finalizar Compra</button>
+            <button id="botao-primario" onclick="zerarQuantidade()">Limpar</button>
 
             <!--* CARRINHO SEM ITENS -->
             <!-- <h3 class="carrinho-vazio__titulo">Seu carrinho está vazio</h3>
