@@ -2,7 +2,7 @@
 
 A Situação de Aprendizagem (SA) é um projeto que ocorre no final de cada semestre dentro do curso de desenvolvimento de sistemas (TDESI) do SENAI. Neste semestre aprendemos sobre web design e desenvolvimento web, onde aplicamos o conhecimento para criar uma aplicação web.
 
-## Propósta
+## Proposta
 
 O [nome-da-empresa/site] é um site de e-commerce, onde o usuário terá sua própria conta, poderá visitar outros vendedores, navegar no catálogo de produtos e realizar compras.
 
